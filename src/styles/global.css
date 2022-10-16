@@ -12,9 +12,23 @@ body {
 
 h1 {
   font-weight: bold;
-  font-size: 34px;
+  font-size: var(--fz-h1);
 }
 
 h3 {
-  font-size: 24px;
+  font-size: var(--fz-h3);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color-w);
+}
+:root {
+  --main: #344552;
+  --text-color-w: white;
+  --text-color-b: black;
+
+  --fz-h1: 34px;
+  --fz-h3: 24px;
+  --fz-p: 16px;
 }
