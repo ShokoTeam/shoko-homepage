@@ -72,28 +72,28 @@ const VerticalCarousel = ({ data, leadingText }) => {
         >
           <div className="carousel">
             <div className="leading-text">
-              <p className="leading-paragraph">{leadingText}</p>
-            </div>
-            <div className="slides">
-              <div className="carousel-inner">
-                {data.map((item, i) => (
-                  <button
-                    type="button"
-                    onClick={() => setActiveIndex(i)}
-                    className={cn("carousel-item", {
-                      active: activeIndex === i,
-                      visible:
-                        Math.abs(determinePlacement(i)) <=
-                        visibleStyleThreshold,
-                    })}
-                    key={item.id}
-                    style={{
-                      transform: `translateY(${determinePlacement(i)}px)`,
-                    }}
-                  >
-                    {item.introline}
-                  </button>
-                ))}
+              <div className="leading-paragraph">{leadingText}</div>
+              <div className="slides">
+                <div className="carousel-inner">
+                  {data.map((item, i) => (
+                    <button
+                      type="button"
+                      onClick={() => setActiveIndex(i)}
+                      className={cn("carousel-item", {
+                        active: activeIndex === i,
+                        visible:
+                          Math.abs(determinePlacement(i)) <=
+                          visibleStyleThreshold,
+                      })}
+                      key={item.id}
+                      style={{
+                        transform: `translateY(${determinePlacement(i)}px)`,
+                      }}
+                    >
+                      {item.introline}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
             <div className="button-container">

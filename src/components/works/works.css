@@ -38,14 +38,10 @@ img {
 .leading-paragraph {
   color: white;
   padding: 0;
-  margin-top: 50%;
-  margin-right: 10px;
+  height: 200px;
 }
 .leading-text {
   display: flex;
-  align-items: center;
-  height: 100%;
-  margin-right: 6px;
 }
 .outer-container .carousel-wrapper {
   background: var(--orange);
@@ -91,7 +87,17 @@ img {
 }
 
 .carousel-inner {
+  display: flex;
   position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.content-inner {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
@@ -112,7 +118,6 @@ img {
   opacity: 0;
   border: none;
   text-align: start;
-  top: 545px;
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 .right {

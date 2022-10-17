@@ -23,3 +23,8 @@
 .team__description {
   margin-top: 2rem;
 }
+.team__card-list {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
