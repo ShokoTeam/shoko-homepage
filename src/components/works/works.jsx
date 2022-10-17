@@ -116,13 +116,30 @@ const VerticalCarousel = ({ data, leadingText }) => {
         </div>
 
         <div className="content">
-          <a href={data[activeIndex].content.copy}>
-            <img
-              src={data[activeIndex].content.image}
-              alt={data[activeIndex].content.introline}
-              className="content-image"
-            />
-          </a>
+          <div className="carousel-inner">
+            {data.map((item, i) => (
+              <a href={data[activeIndex].content.copy}>
+                <div
+                  className={cn("carousel-item right", {
+                    active: activeIndex === i,
+                    visible:
+                      Math.abs(determinePlacement(i)) <= visibleStyleThreshold,
+                  })}
+                  key={item.id}
+                  style={{
+                    transition: 3,
+                    transform: `translateY(${determinePlacement(i)}em)`,
+                  }}
+                >
+                  <img
+                    src={data[activeIndex].content.image}
+                    alt={data[activeIndex].content.introline}
+                    className="content-image"
+                  />
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
     </div>
