@@ -5,7 +5,7 @@
       "introline": "Fores",
       "id": "dogs",
       "content": {
-        "image": "https://via.placeholder.com/400x200?text=Dogs",
+        "image": "/assets/Fores_mockUp.jpg",
         "copy": "#",
         "color": "#386FA4"
       }
@@ -14,18 +14,9 @@
       "introline": "Anonime",
       "id": "elephants",
       "content": {
-        "image": "https://via.placeholder.com/400x200?text=Elephants",
+        "image": "/assets/Anonime_mockUp.jpg",
         "copy": "#",
         "color": "#333333"
-      }
-    },
-    {
-      "introline": "ProjectName",
-      "id": "bears",
-      "content": {
-        "image": "https://via.placeholder.com/400x200?text=Bears",
-        "copy": "",
-        "color": "gray"
       }
     }
   ]
