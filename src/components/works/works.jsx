@@ -71,8 +71,8 @@ const VerticalCarousel = ({ data, leadingText }) => {
           }}
         >
           <div className="carousel">
-            <div className="leading-text">
-              <div className="leading-paragraph">{leadingText}</div>
+            <div className="content__container noselect">
+              <div className="leading-div">{leadingText}</div>
               <div className="slides">
                 <div className="carousel-inner">
                   {data.map((item, i) => (
@@ -96,22 +96,6 @@ const VerticalCarousel = ({ data, leadingText }) => {
                 </div>
               </div>
             </div>
-            <div className="button-container">
-              <button
-                type="button"
-                className="carousel-button prev"
-                onClick={() => handleClick("prev")}
-              >
-                <ArrowUp />
-              </button>
-              <button
-                type="button"
-                className="carousel-button next"
-                onClick={() => handleClick("next")}
-              >
-                <ArrowDown />
-              </button>
-            </div>
           </div>
         </div>
 
@@ -120,7 +104,7 @@ const VerticalCarousel = ({ data, leadingText }) => {
             {data.map((item, i) => (
               <a href={data[activeIndex].content.copy}>
                 <div
-                  className={cn("carousel-item right", {
+                  className={cn("carousel-image right", {
                     active: activeIndex === i,
                     visible:
                       Math.abs(determinePlacement(i)) <= visibleStyleThreshold,
@@ -128,7 +112,7 @@ const VerticalCarousel = ({ data, leadingText }) => {
                   key={item.id}
                   style={{
                     transition: 3,
-                    transform: `translateY(${determinePlacement(i)}em)`,
+                    transform: `translateZ(${determinePlacement(i)}px)`,
                   }}
                 >
                   <img

@@ -10,8 +10,6 @@ body {
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-  height: 250px;
-  width: 250px;
   background-color: white;
   box-shadow: black;
 }
