@@ -1,6 +1,5 @@
 import React from "react";
 import "./team.css";
-import Card from "../ui-components/card/card.jsx";
 
 const team = () => {
   return (

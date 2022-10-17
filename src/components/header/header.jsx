@@ -2,8 +2,7 @@ import React from "react";
 import "./header.css";
 import "../../styles/global.css";
 import Logo from "../../images/logo_white.png";
-import Arrow from "../../images/icons/Arrow.svg";
-
+import Arrow from "../../images/icons/ArrowDown.svg";
 const header = () => {
   return (
     <div className="header__container">
