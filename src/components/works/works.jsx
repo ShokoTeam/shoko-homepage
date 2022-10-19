@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import cn from "classnames";
 import "./works.css";
-import { ReactComponent as ArrowDown } from "../../images/icons/ArrowDown.svg";
-import { ReactComponent as ArrowUp } from "../../images/icons/ArrowUp.svg";
 
 const VerticalCarousel = ({ data, leadingText }) => {
   const [activeIndex, setActiveIndex] = useState(0);
