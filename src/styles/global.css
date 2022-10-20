@@ -25,9 +25,10 @@ a {
 }
 
 :root {
-  --main: #344552;
+  --main: #22273a;
   --text-color-w: white;
   --text-color-b: black;
+  --button-background: #303e72;
 
   --fz-G: 56px;
   --fz-h1: 34px;
