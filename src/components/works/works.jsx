@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import cn from "classnames";
 import "./works.css";
-import { ReactComponent as ArrowDown } from "../../images/icons/ArrowDown.svg";
-import { ReactComponent as ArrowUp } from "../../images/icons/ArrowUp.svg";
 
 const VerticalCarousel = ({ data, leadingText }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -71,46 +69,30 @@ const VerticalCarousel = ({ data, leadingText }) => {
           }}
         >
           <div className="carousel">
-            <div className="leading-text">
-              <p className="leading-paragraph">{leadingText}</p>
-            </div>
-            <div className="slides">
-              <div className="carousel-inner">
-                {data.map((item, i) => (
-                  <button
-                    type="button"
-                    onClick={() => setActiveIndex(i)}
-                    className={cn("carousel-item", {
-                      active: activeIndex === i,
-                      visible:
-                        Math.abs(determinePlacement(i)) <=
-                        visibleStyleThreshold,
-                    })}
-                    key={item.id}
-                    style={{
-                      transform: `translateY(${determinePlacement(i)}px)`,
-                    }}
-                  >
-                    {item.introline}
-                  </button>
-                ))}
+            <div className="content__container noselect">
+              <div className="leading-div">{leadingText}</div>
+              <div className="slides">
+                <div className="carousel-inner">
+                  {data.map((item, i) => (
+                    <button
+                      type="button"
+                      onClick={() => setActiveIndex(i)}
+                      className={cn("carousel-item", {
+                        active: activeIndex === i,
+                        visible:
+                          Math.abs(determinePlacement(i)) <=
+                          visibleStyleThreshold,
+                      })}
+                      key={item.id}
+                      style={{
+                        transform: `translateY(${determinePlacement(i)}px)`,
+                      }}
+                    >
+                      {item.introline}
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="button-container">
-              <button
-                type="button"
-                className="carousel-button prev"
-                onClick={() => handleClick("prev")}
-              >
-                <ArrowUp />
-              </button>
-              <button
-                type="button"
-                className="carousel-button next"
-                onClick={() => handleClick("next")}
-              >
-                <ArrowDown />
-              </button>
             </div>
           </div>
         </div>
@@ -120,7 +102,7 @@ const VerticalCarousel = ({ data, leadingText }) => {
             {data.map((item, i) => (
               <a href={data[activeIndex].content.copy}>
                 <div
-                  className={cn("carousel-item right", {
+                  className={cn("carousel-image right", {
                     active: activeIndex === i,
                     visible:
                       Math.abs(determinePlacement(i)) <= visibleStyleThreshold,
@@ -128,7 +110,7 @@ const VerticalCarousel = ({ data, leadingText }) => {
                   key={item.id}
                   style={{
                     transition: 3,
-                    transform: `translateY(${determinePlacement(i)}em)`,
+                    transform: `translateZ(${determinePlacement(i)}px)`,
                   }}
                 >
                   <img

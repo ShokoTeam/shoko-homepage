@@ -1,5 +1,6 @@
 import React from "react";
 import "./team.css";
+import Card from "./../ui-components/card/card.jsx";
 
 const team = () => {
   return (
@@ -15,7 +16,12 @@ const team = () => {
           a lot
         </h3>
         <h1 className="team__heading">Our Team</h1>
-        <div className="team__card-list"></div>
+        <div className="team__card-list">
+          <Card number={1} />
+          <Card number={2} />
+          <Card number={3} />
+          <Card number={4} />
+        </div>
       </div>
     </div>
   );

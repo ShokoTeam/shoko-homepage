@@ -18,6 +18,24 @@
         "copy": "#",
         "color": "#333333"
       }
+    },
+    {
+      "introline": "Anonime",
+      "id": "elephants",
+      "content": {
+        "image": "/assets/Anonime_mockUp.jpg",
+        "copy": "#",
+        "color": "gray"
+      }
+    },
+    {
+      "introline": "Anonime",
+      "id": "elephants",
+      "content": {
+        "image": "/assets/Anonime_mockUp.jpg",
+        "copy": "#",
+        "color": "#d3d3d3"
+      }
     }
   ]
 }

@@ -6,10 +6,10 @@
 .form__button {
   height: 60px;
   width: 170px;
-  background-color: #67737d;
+  background-color: var(--button-background);
   border-radius: 10px;
   border: 1px solid #67737d;
-  color: white;
-  font-size: 24px;
-  margin-top: 1rem;
+  color: var(--text-color-w);
+  font-size: var(--fz-h3);
+  margin-top: 3rem;
 }

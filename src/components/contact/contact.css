@@ -24,17 +24,3 @@
   color: var(--text-color-w);
   margin-top: 0.5rem;
 }
-
-.link__container {
-  display: flex;
-  gap: 8rem;
-  margin-bottom: 3rem;
-}
-
-.footer__copyright {
-  color: var(--text-color-w);
-  font-size: var(--fz-p);
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 2rem;
-}

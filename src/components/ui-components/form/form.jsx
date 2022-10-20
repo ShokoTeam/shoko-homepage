@@ -14,9 +14,9 @@ const form = () => {
         <FormLabel></FormLabel>
         <Input
           h="35px"
-          w="590px"
+          w="390px"
           placeholder="Name"
-          borderRadius={5}
+          borderRadius={10}
           fontSize={18}
           border="1px solid #fff"
           type="name"
@@ -28,9 +28,9 @@ const form = () => {
         <FormLabel></FormLabel>
         <Input
           h="35px"
-          w="590px"
+          w="390px"
           placeholder="E-Mail"
-          borderRadius={5}
+          borderRadius={10}
           fontSize={18}
           type="email"
           border="1px solid #fff"
@@ -41,9 +41,9 @@ const form = () => {
         <FormLabel></FormLabel>
         <Input
           h="215px"
-          w="590px"
+          w="390px"
           placeholder="Message"
-          borderRadius={5}
+          borderRadius={10}
           fontSize={18}
           border="1px solid #fff"
           pl={"1rem"}

@@ -1,55 +1,27 @@
 import React from "react";
 import "./footer.css";
+import Logo from "../../images/logo_white.png";
 
 const footer = () => {
   return (
-    <div>
-      <div class="waves">
-        <div class="wave" id="wave1"></div>
-        <div class="wave" id="wave2"></div>
-        <div class="wave" id="wave3"></div>
-        <div class="wave" id="wave4"></div>
+    <div className="footer__container">
+      <div className="link__container">
+        <a href="#">
+          <img src={Logo} alt="shoko" className="footer__logo" />
+        </a>
+        <a href="">
+          <p className="footer__link">Donate</p>
+        </a>
+        <a href="">
+          <p className="footer__link">Github</p>
+        </a>
+        <a href="">
+          <p className="footer__link">VK</p>
+        </a>
+        <a href="">
+          <p className="footer__link">Privacy Policy</p>
+        </a>
       </div>
-      <ul class="social_icon">
-        <li>
-          <a href="#">
-            <ion-icon name="logo-facebook"></ion-icon>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <ion-icon name="logo-twitch"></ion-icon>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <ion-icon name="logo-linkedin"></ion-icon>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <ion-icon name="logo-web-component"></ion-icon>
-          </a>
-        </li>
-      </ul>
-      <ul class="menu">
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Services</a>
-        </li>
-        <li>
-          <a href="#">Team</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-      <p>@2022 TerrniT| All rights Reserved</p>
     </div>
   );
 };
