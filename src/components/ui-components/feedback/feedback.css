@@ -1,0 +1,17 @@
+.content__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 42px 90px;
+  justify-content: center;
+  align-items: center;
+}
+.profile__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile__image {
+  height: 45px;
+  width: 45px;
+}

@@ -6,7 +6,6 @@ import Contact from "./components/contact/contact.jsx";
 import Works from "./components/works/works.jsx";
 import Hero from "./components/hero/hero.jsx";
 import Testimonials from "./components/testimonials/testimonials.jsx";
-import Footer from "./components/footer/footer.jsx";
 import data from "./data/data.json";
 
 import "./styles/global.css";
