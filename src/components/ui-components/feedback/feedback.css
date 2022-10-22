@@ -15,3 +15,8 @@
   height: 45px;
   width: 45px;
 }
+
+.not-active {
+  transition: 0.2s color ease-in-out;
+  color: #858585;
+}

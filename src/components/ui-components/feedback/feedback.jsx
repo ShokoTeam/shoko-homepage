@@ -1,10 +1,13 @@
 import React from "react";
 import "./feedback.css";
 import { Avatar } from "@chakra-ui/react";
+import { useSwiperSlide } from "swiper/react";
 
-const feedback = (props) => {
+const Feedback = (props) => {
+  const swiperSlide = useSwiperSlide();
+
   return (
-    <div className="feedback__container">
+    <div className={swiperSlide.isNext ? "feedback__container" : "not-active"}>
       <div className="content__container">
         <h3 className="feedback__text">{props.text}</h3>
         <div className="profile__content">
@@ -16,4 +19,4 @@ const feedback = (props) => {
   );
 };
 
-export default feedback;
+export default Feedback;

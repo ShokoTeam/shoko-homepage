@@ -1,13 +1,15 @@
 import React from "react";
 import "./testimonials.css";
+
 import "swiper/css";
 import "swiper/css/navigation";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Navigation, Pagination } from "swiper";
+
 import Feedback from "../ui-components/feedback/feedback.jsx";
-import Dribble from "../../images/icons/Dribble.svg";
-import Icon from "../../images/icons/Success.svg";
+
+// TODO: Delete hardcode text value in Feedback and create data source
 
 const testimonials = () => {
   return (
@@ -15,14 +17,12 @@ const testimonials = () => {
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
-        slidesPerGroup={3}
         loop={true}
-        loopFillGroupWithBlank={true}
         pagination={{
           clickable: true,
         }}
-        modules={[Navigation]}
-        className="swiper"
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
       >
         <SwiperSlide>
           <Feedback
@@ -30,16 +30,41 @@ const testimonials = () => {
             name="userName"
           />
         </SwiperSlide>
-        <SwiperSlide>Content 2</SwiperSlide>
-        <SwiperSlide>Content 3</SwiperSlide>
 
-        <SwiperSlide>Content 1</SwiperSlide>
-        <SwiperSlide>Content 2</SwiperSlide>
-        <SwiperSlide>Content 3</SwiperSlide>
+        <SwiperSlide>
+          <Feedback
+            text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti eveniet assumenda quidem laboriosam repudiandae, autem tempore consectetur enim ratione eligendi?"
+            name="userName"
+          />
+        </SwiperSlide>
 
-        <SwiperSlide>Content 1</SwiperSlide>
-        <SwiperSlide>Content 2</SwiperSlide>
-        <SwiperSlide>Content 3</SwiperSlide>
+        <SwiperSlide>
+          <Feedback
+            text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti eveniet assumenda quidem laboriosam repudiandae, autem tempore consectetur enim ratione eligendi?"
+            name="userName"
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Feedback
+            text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti eveniet assumenda quidem laboriosam repudiandae, autem tempore consectetur enim ratione eligendi?"
+            name="userName"
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Feedback
+            text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti eveniet assumenda quidem laboriosam repudiandae, autem tempore consectetur enim ratione eligendi?"
+            name="userName"
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Feedback
+            text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti eveniet assumenda quidem laboriosam repudiandae, autem tempore consectetur enim ratione eligendi?"
+            name="userName"
+          />
+        </SwiperSlide>
       </Swiper>
     </div>
   );
