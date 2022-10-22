@@ -6,9 +6,10 @@
 }
 
 .team__content {
-  width: 80%;
+  width: 75%;
   color: var(--text-color-b);
   text-align: center;
+  margin-top: 2rem;
 }
 
 .team__sub {
@@ -17,14 +18,14 @@
 }
 
 .team__heading {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .team__description {
   margin-top: 2rem;
 }
 .team__card-list {
-  margin-top: 2rem;
+  margin-top: 5rem;
   display: flex;
   justify-content: space-evenly;
 }

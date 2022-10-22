@@ -1,15 +1,30 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-.Tilt-inner {
-}
-
-.Tilt {
+.parallax-on-track {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  transform-style: preserve-3d;
+}
+
+.inner-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: white;
+  transform: translateZ(60px);
+}
+
+.card__container {
+  width: 300px;
+  height: 376px;
   background-color: white;
-  box-shadow: black;
+  color: white;
+  border: 1px solid black;
+}
+.card__header {
+  background-color: red;
+  height: 70%;
+  width: 100%;
 }
