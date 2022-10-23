@@ -1,17 +1,9 @@
 import React from "react";
 import "./card.css";
-import Tilt from "react-parallax-tilt";
 
-const card = ({ name, image }) => {
+const card = ({ image }) => {
   return (
-    <Tilt
-      className="parallax-on-track"
-      perspective={300}
-      glareEnable={true}
-      glareMaxOpacity={0.75}
-      glarePosition="all"
-      scale={1.02}
-    >
+    <div>
       <div className="card__container">
         <div className="card__header">
           <img src={image} alt="header__image" />
@@ -19,7 +11,7 @@ const card = ({ name, image }) => {
         <div className="card__bottom"></div>
       </div>
       <div className="inner-element"></div>
-    </Tilt>
+    </div>
   );
 };
 

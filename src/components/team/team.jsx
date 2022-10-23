@@ -18,9 +18,6 @@ const team = () => {
         <h1 className="team__heading">Our Team</h1>
         <div className="team__card-container">
           <Card name="Pasha" />
-          <Card name="Dasha" />
-          <Card name="Gleb" />
-          <Card name="Ruslan" />
         </div>
       </div>
     </div>
