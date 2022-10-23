@@ -1,11 +1,12 @@
 import React from "react";
 import "./testimonials.css";
 
+import "swiper/css/pagination";
 import "swiper/css";
 import "swiper/css/navigation";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
+import { Pagination } from "swiper";
 
 import Feedback from "../ui-components/feedback/feedback.jsx";
 
@@ -15,14 +16,31 @@ const testimonials = () => {
   return (
     <div className="testimonials__container">
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
+        breakpoints={{
+          340: {
+            slidesPerView: 1,
+            spaceBetween: 80,
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 60,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        }}
+        centeredSlides
         loop={true}
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
+        modules={[Pagination]}
+        className="swiper"
       >
         <SwiperSlide>
           <Feedback

@@ -7,7 +7,9 @@ const Feedback = (props) => {
   const swiperSlide = useSwiperSlide();
 
   return (
-    <div className={swiperSlide.isNext ? "feedback__container" : "not-active"}>
+    <div
+      className={swiperSlide.isActive ? "feedback__container" : "not-active"}
+    >
       <div className="content__container">
         <h3 className="feedback__text">{props.text}</h3>
         <div className="profile__content">

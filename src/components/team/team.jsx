@@ -16,7 +16,7 @@ const team = () => {
           a lot
         </h3>
         <h1 className="team__heading">Our Team</h1>
-        <div className="team__card-list">
+        <div className="team__card-container">
           <Card name="Pasha" />
           <Card name="Dasha" />
           <Card name="Gleb" />

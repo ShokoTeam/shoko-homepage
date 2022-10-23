@@ -24,8 +24,14 @@
 .team__description {
   margin-top: 2rem;
 }
-.team__card-list {
+.team__card-container {
   margin-top: 5rem;
   display: flex;
   justify-content: space-evenly;
+}
+
+@media screen and (max-width: 440px) {
+  .team__card-container {
+    height: 10vh;
+  }
 }

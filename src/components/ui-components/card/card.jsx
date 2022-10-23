@@ -6,7 +6,7 @@ const card = ({ name, image }) => {
   return (
     <Tilt
       className="parallax-on-track"
-      perspective={400}
+      perspective={300}
       glareEnable={true}
       glareMaxOpacity={0.75}
       glarePosition="all"
@@ -14,7 +14,7 @@ const card = ({ name, image }) => {
     >
       <div className="card__container">
         <div className="card__header">
-          <img src={image} height="100%" width="100%" alt="header__image" />
+          <img src={image} alt="header__image" />
         </div>
         <div className="card__bottom"></div>
       </div>
