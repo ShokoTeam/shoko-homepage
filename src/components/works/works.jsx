@@ -1,136 +1,75 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
-import cn from "classnames";
+
+import {
+  Controller,
+  EffectFade,
+  Mousewheel,
+  Navigation,
+  Pagination,
+} from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 import "./works.css";
-
-const VerticalCarousel = ({ data, leadingText }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  // Used to determine which items appear above the active item
-  const halfwayIndex = Math.ceil(data.length / 2);
-
-  // Usd to determine the height/spacing of each item
-  const itemHeight = 52;
-
-  // Used to determine at what point an item is moved from the top to the bottom
-  const shuffleThreshold = halfwayIndex * itemHeight;
-
-  // Used to determine which items should be visible. this prevents the "ghosting" animation
-  const visibleStyleThreshold = shuffleThreshold / 2;
-
-  const determinePlacement = (itemIndex) => {
-    // If these match, the item is active
-    if (activeIndex === itemIndex) return 0;
-
-    if (itemIndex >= halfwayIndex) {
-      if (activeIndex > itemIndex - halfwayIndex) {
-        return (itemIndex - activeIndex) * itemHeight;
-      } else {
-        return -(data.length + activeIndex - itemIndex) * itemHeight;
-      }
-    }
-
-    if (itemIndex > activeIndex) {
-      return (itemIndex - activeIndex) * itemHeight;
-    }
-
-    if (itemIndex < activeIndex) {
-      if ((activeIndex - itemIndex) * itemHeight >= shuffleThreshold) {
-        return (data.length - (activeIndex - itemIndex)) * itemHeight;
-      }
-      return -(activeIndex - itemIndex) * itemHeight;
-    }
-  };
-
-  const handleClick = (direction) => {
-    setActiveIndex((prevIndex) => {
-      if (direction === "next") {
-        if (prevIndex + 1 > data.length - 1) {
-          return 0;
-        }
-        return prevIndex + 1;
-      }
-
-      if (prevIndex - 1 < 0) {
-        return data.length - 1;
-      }
-
-      return prevIndex - 1;
-    });
-  };
+import data from "./data.json";
+const Works = () => {
+  const [firstSwiper, setFirstSwiper] = useState(null);
+  const [secondSwiper, setSecondSwiper] = useState(null);
 
   return (
-    <div className="container">
-      <section className="outer-container">
-        <div
-          className="carousel-wrapper"
-          style={{
-            backgroundColor: `${data[activeIndex].content.color}`,
+    <div className="works__container">
+      <div className="carousel__content">
+        <Swiper
+          direction={"vertical"}
+          className="carousel__left"
+          slidesPerView={1}
+          spaceBetween={0}
+          effect={"fade"}
+          mousewheel={true}
+          pagination={{
+            clickable: true,
           }}
+          modules={[Controller, EffectFade, Pagination, Mousewheel]}
+          onSwiper={setFirstSwiper}
+          controller={{ control: secondSwiper }}
         >
-          <div className="carousel">
-            <div className="content__container noselect">
-              <div className="leading-div">{leadingText}</div>
-              <div className="slides">
-                <div className="carousel-inner">
-                  {data.map((item, i) => (
-                    <button
-                      type="button"
-                      onClick={() => setActiveIndex(i)}
-                      className={cn("carousel-item", {
-                        active: activeIndex === i,
-                        visible:
-                          Math.abs(determinePlacement(i)) <=
-                          visibleStyleThreshold,
-                      })}
-                      key={item.id}
-                      style={{
-                        transform: `translateY(${determinePlacement(i)}px)`,
-                      }}
-                    >
-                      {item.introline}
-                    </button>
-                  ))}
-                </div>
-              </div>
+          {data.map((item) => (
+            <div className="swiper__slider-left" key={item.id}>
+              <SwiperSlide style={{ backgroundColor: `${item.content.color}` }}>
+                <div>{item.name}</div>
+              </SwiperSlide>
             </div>
-          </div>
-        </div>
+          ))}
+        </Swiper>
+      </div>
 
-        <div className="content">
-          <div className="carousel-inner">
-            {data.map((item, i) => (
-              <a href={data[activeIndex].content.copy}>
-                <div
-                  className={cn("carousel-image right", {
-                    active: activeIndex === i,
-                    visible:
-                      Math.abs(determinePlacement(i)) <= visibleStyleThreshold,
-                  })}
-                  key={item.id}
-                  style={{
-                    transition: 3,
-                    transform: `translateZ(${determinePlacement(i)}px)`,
-                  }}
-                >
-                  <img
-                    src={data[activeIndex].content.image}
-                    alt={data[activeIndex].content.introline}
-                    className="content-image"
-                  />
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="carousel__image">
+        <Swiper
+          direction={"vertical"}
+          className="carousel__right"
+          modules={[Controller, EffectFade]}
+          onSwiper={setSecondSwiper}
+          controller={{ control: firstSwiper }}
+          effect={"fade"}
+        >
+          {data.map((item) => (
+            <SwiperSlide key={item.id}>
+              <div className="product-container">
+                <img
+                  src={item.content.image}
+                  alt="produce"
+                  className="product-image"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };
 
-VerticalCarousel.propTypes = {
-  data: PropTypes.array.isRequired,
-  leadingText: PropTypes.string.isRequired,
-};
-
-export default VerticalCarousel;
+export default Works;
