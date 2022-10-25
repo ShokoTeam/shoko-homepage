@@ -15,9 +15,14 @@ const team = () => {
           We don't know where thsi path would lead us to but we hope to achieve
           a lot
         </h3>
+
         <h1 className="team__heading">Our Team</h1>
+
         <div className="team__card-container">
-          <Card name="Pasha" />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
         </div>
       </div>
     </div>

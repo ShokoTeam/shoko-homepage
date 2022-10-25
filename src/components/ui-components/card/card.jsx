@@ -1,18 +1,35 @@
 import React from "react";
+import Hleb from "../../../images/StaffCats/Hleb.jpg";
 import "./card.css";
 
-const card = ({ image }) => {
+const Card = () => {
   return (
     <div>
-      <div className="card__container">
-        <div className="card__header">
-          <img src={image} alt="header__image" />
+      <div className="card">
+        <div className="card-image">
+          <img src={Hleb} alt="sd" />
         </div>
-        <div className="card__bottom"></div>
+        <ul className="social-icons">
+          <li>
+            <a href="#">A</a>
+          </li>
+          <li>
+            <a href="#">B</a>
+          </li>
+          <li>
+            <a href="#">C</a>
+          </li>
+          <li>
+            <a href="#">E</a>
+          </li>
+        </ul>
+        <div className="details">
+          <h2>Hleb</h2>
+          <span className="job-title">UI Designer</span>
+        </div>
       </div>
-      <div className="inner-element"></div>
     </div>
   );
 };
 
-export default card;
+export default Card;

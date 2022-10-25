@@ -1,12 +1,10 @@
 .team__container {
-  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .team__content {
-  width: 75%;
   color: var(--text-color-b);
   text-align: center;
   margin-top: 2rem;
@@ -24,14 +22,15 @@
 .team__description {
   margin-top: 2rem;
 }
+
 .team__card-container {
-  margin-top: 5rem;
-  display: flex;
-  justify-content: space-evenly;
+  display: inline-flex;
+  margin-top: 3rem;
+  gap: 50px;
 }
 
-@media screen and (max-width: 440px) {
+@media (max-width: 375px) {
   .team__card-container {
-    height: 10vh;
+    flex-direction: column;
   }
 }

@@ -15,6 +15,7 @@ import "swiper/css/navigation";
 
 import "./works.css";
 import data from "./data.json";
+
 const Works = () => {
   const [firstSwiper, setFirstSwiper] = useState(null);
   const [secondSwiper, setSecondSwiper] = useState(null);
