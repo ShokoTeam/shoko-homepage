@@ -39,7 +39,10 @@ const Works = () => {
           {data.map((item) => (
             <div className="swiper__slider-left" key={item.id}>
               <SwiperSlide style={{ backgroundColor: `${item.content.color}` }}>
-                <div>{item.name}</div>
+                <div className="slider-left__heading">
+                  <h3>We built</h3>
+                  <a href="#">{item.name}</a>
+                </div>
               </SwiperSlide>
             </div>
           ))}

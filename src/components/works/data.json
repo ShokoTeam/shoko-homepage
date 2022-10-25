@@ -4,7 +4,7 @@
     "id": "dogs",
     "content": {
       "image": "/assets/fores.jpg",
-      "color": "green"
+      "color": "#757575"
     }
   },
   {
@@ -20,7 +20,7 @@
     "id": "djaskl",
     "content": {
       "image": "/assets/fores.jpg",
-      "color": "blue"
+      "color": "#554555"
     }
   }
 ]

@@ -34,6 +34,11 @@ a {
   --fz-h1: 34px;
   --fz-h3: 24px;
   --fz-p: 16px;
+  --swiper-theme-color: #787878;
+}
+.swiper-pagination-bullet {
+  height: 15px;
+  width: 15px;
 }
 
 .noselect {

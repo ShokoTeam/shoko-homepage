@@ -34,6 +34,21 @@ body {
   width: 100%;
   object-fit: cover;
 }
+.slider-left__heading {
+  width: 20%;
+  text-align: left;
+}
+
+.slider-left__heading a {
+  color: white;
+  font-size: 44px;
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}
+
+.slider-left__heading h3 {
+  font-weight: bold;
+}
 
 @media screen and (min-width: 1024) {
   .works__container {
