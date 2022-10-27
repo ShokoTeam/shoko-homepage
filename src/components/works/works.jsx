@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 
-import {
-  Controller,
-  EffectFade,
-  Mousewheel,
-  Navigation,
-  Pagination,
-} from "swiper";
+import { Controller, EffectFade, Mousewheel, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
