@@ -1,11 +1,25 @@
-import React from "react";
-import { FormControl, FormLabel, Input, Button } from "@chakra-ui/react";
+import React, { useState } from "react";
+import {
+  FormControl,
+  FormLabel,
+  Input,
+  Button,
+  FormHelperText,
+  FormErrorMessage,
+} from "@chakra-ui/react";
 import "./form.css";
 
-const form = () => {
+const Form = () => {
+  const [input, setInput] = useState("");
+
+  const handleInputChange = (e) => setInput(e.target.value);
+
+  const isError = input === "";
+
   return (
     <div className="form__container">
       <FormControl
+        isInvalid={isError}
         mt={"2rem"}
         display="flex"
         flexDir="column"
@@ -14,7 +28,7 @@ const form = () => {
         <FormLabel></FormLabel>
         <Input
           h="35px"
-          w="390px"
+          w="320px"
           placeholder="Name"
           borderRadius={10}
           fontSize={18}
@@ -28,27 +42,36 @@ const form = () => {
         <FormLabel></FormLabel>
         <Input
           h="35px"
-          w="390px"
+          w="320px"
           placeholder="E-Mail"
           borderRadius={10}
           fontSize={18}
-          type="email"
           border="1px solid #fff"
           pl={"1rem"}
           mt={15}
+          type="email"
+          value={input}
+          onChange={handleInputChange}
         />
+        {!isError ? (
+          <FormHelperText color={"gray"} fontSize={12} mt={5}>
+            Enter the email you'd like to receive the newsletter on
+          </FormHelperText>
+        ) : (
+          <FormErrorMessage></FormErrorMessage>
+        )}
 
         <FormLabel></FormLabel>
         <Input
           h="215px"
-          w="390px"
+          w="320px"
           placeholder="Message"
           borderRadius={10}
           fontSize={18}
           border="1px solid #fff"
           pl={"1rem"}
           pb={"11rem"}
-          mt={15}
+          mt={40}
           type="message"
         />
       </FormControl>
@@ -57,4 +80,4 @@ const form = () => {
   );
 };
 
-export default form;
+export default Form;

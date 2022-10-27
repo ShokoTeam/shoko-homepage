@@ -6,6 +6,7 @@
 .form__button {
   height: 60px;
   width: 170px;
+  align-items: center;
   background-color: var(--button-background);
   border-radius: 10px;
   border: 1px solid #67737d;

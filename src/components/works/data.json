@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Fores",
+    "id": "dogs",
+    "content": {
+      "image": "/assets/fores.jpg",
+      "color": "#757575"
+    }
+  },
+  {
+    "name": "Anonime",
+    "id": "cats",
+    "content": {
+      "image": "/assets/anonime.jpg",
+      "color": "#333333"
+    }
+  },
+  {
+    "name": "Fores",
+    "id": "djaskl",
+    "content": {
+      "image": "/assets/fores.jpg",
+      "color": "#554555"
+    }
+  }
+]

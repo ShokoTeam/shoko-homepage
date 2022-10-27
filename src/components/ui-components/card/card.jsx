@@ -1,17 +1,48 @@
 import React from "react";
 import "./card.css";
-import Tilt from "react-tilt";
+import {
+  FaGithubSquare,
+  FaTelegram,
+  FaYoutube,
+  FaBehanceSquare,
+} from "react-icons/fa";
 
-const card = ({ number }) => {
+const Card = (props) => {
   return (
-    <Tilt
-      className="Tilt"
-      options={{ max: 25, speed: 400 }}
-      style={{ height: 250, width: 250 }}
-    >
-      <div className="Tilt-inner">Card {number} </div>
-    </Tilt>
+    <div>
+      <div className="card">
+        <div className="card-image">
+          <img src={props.image} alt="cat" />
+        </div>
+        <ul className="social-icons">
+          <li>
+            <a href="#">
+              <FaGithubSquare />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <FaTelegram />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <FaYoutube />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <FaBehanceSquare />
+            </a>
+          </li>
+        </ul>
+        <div className="details">
+          <h2>{props.name}</h2>
+          <span className="job-title">{props.job}</span>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default card;
+export default Card;

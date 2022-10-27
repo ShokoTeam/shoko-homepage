@@ -3,11 +3,9 @@ import "./App.css";
 import Team from "./components/team/team.jsx";
 import Skills from "./components/skills/skills.jsx";
 import Contact from "./components/contact/contact.jsx";
-import Works from "./components/works/works.jsx";
 import Hero from "./components/hero/hero.jsx";
 import Testimonials from "./components/testimonials/testimonials.jsx";
-import Footer from "./components/footer/footer.jsx";
-import data from "./data/data.json";
+import Works from "./components/works/works";
 
 import "./styles/global.css";
 
@@ -17,7 +15,7 @@ function App() {
       <Hero />
       <Team />
       <Skills />
-      <Works data={data.slides} leadingText={"We built"} />
+      <Works />
       <Testimonials />
       <Contact />
     </>
