@@ -39,6 +39,7 @@ const SkillTab = () => {
   return (
     <Center>
       <Tabs
+        maxW={320}
         variant="unstyled"
         padding={10}
         borderRadius={15}
@@ -104,19 +105,19 @@ const SkillTab = () => {
                 justifyItems="center"
                 gap={40}
               >
-                <Box display="flex" gap={100} alignItems="center">
+                <Box display="flex" gap={60} alignItems="center">
                   <SiHtml5 />
                   <SiTailwindcss />
                   <FaSass />
                 </Box>
 
-                <Box display="flex" gap={100} alignItems="center">
+                <Box display="flex" gap={60} alignItems="center">
                   <FaNode />
                   <FaReact />
                   <SiRedux />
                 </Box>
 
-                <Box display="flex" gap={100} alignItems="center">
+                <Box display="flex" gap={60} alignItems="center">
                   <SiNextdotjs />
                   <SiVite />
                   <SiTypescript />
@@ -139,19 +140,19 @@ const SkillTab = () => {
                 justifyItems="center"
                 gap={40}
               >
-                <Box display="flex" gap={100} alignItems="center">
+                <Box display="flex" gap={60} alignItems="center">
                   <SiFlutter />
                   <SiDart />
                   <DiBrackets />
                 </Box>
 
-                <Box display="flex" gap={100} alignItems="center">
+                <Box display="flex" gap={60} alignItems="center">
                   <TbBrandReactNative />
                   <DiAndroid />
                   <SiMysql />
                 </Box>
 
-                <Box display="flex" gap={100} alignItems="center">
+                <Box display="flex" gap={60} alignItems="center">
                   <SiExpo />
                   <SiFirebase />
                 </Box>
@@ -173,13 +174,13 @@ const SkillTab = () => {
                 justifyItems="center"
                 gap={40}
               >
-                <Box display="flex" gap={100} alignItems="center">
+                <Box display="flex" gap={60} alignItems="center">
                   <SiUnity />
                   <SiBlender />
                   <SiCplusplus />
                 </Box>
 
-                <Box display="flex" gap={100} alignItems="center">
+                <Box display="flex" gap={60} alignItems="center">
                   <SiWebgl />
                 </Box>
               </Flex>
