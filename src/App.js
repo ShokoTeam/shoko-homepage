@@ -8,6 +8,7 @@ import Testimonials from "./components/testimonials/testimonials.jsx";
 import Works from "./components/works/works";
 
 import "./styles/global.css";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function App() {
   return (

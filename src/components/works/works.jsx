@@ -1,73 +1,48 @@
-import React, { useState } from "react";
-
-import { Controller, EffectFade, Mousewheel, Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
+import React from "react";
 import "./works.css";
-import data from "./data.json";
+import CardItem from "./CardItem";
+import ImageFores from "../../images/mockups/Fores_mockUp.jpg";
 
-const Works = () => {
-  const [firstSwiper, setFirstSwiper] = useState(null);
-  const [secondSwiper, setSecondSwiper] = useState(null);
-
+// #TODO: Migrate this section to Chakra UI
+function Works() {
   return (
-    <div className="works__container">
-      <div className="carousel__content">
-        <Swiper
-          direction={"vertical"}
-          className="carousel__left"
-          slidesPerView={1}
-          spaceBetween={0}
-          effect={"fade"}
-          mousewheel={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Controller, EffectFade, Pagination, Mousewheel]}
-          onSwiper={setFirstSwiper}
-          controller={{ control: secondSwiper }}
-        >
-          {data.map((item) => (
-            <div className="swiper__slider-left" key={item.id}>
-              <SwiperSlide style={{ backgroundColor: `${item.content.color}` }}>
-                <div className="slider-left__heading">
-                  <h3>We built</h3>
-                  <a href="#">{item.name}</a>
-                </div>
-              </SwiperSlide>
-            </div>
-          ))}
-        </Swiper>
-      </div>
-
-      <div className="carousel__image">
-        <Swiper
-          direction={"vertical"}
-          className="carousel__right"
-          modules={[Controller, EffectFade]}
-          onSwiper={setSecondSwiper}
-          controller={{ control: firstSwiper }}
-          effect={"fade"}
-        >
-          {data.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div className="product-container">
-                <img
-                  src={item.content.image}
-                  alt="produce"
-                  className="product-image"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+    <div className="cards">
+      <h1></h1>
+      <div className="cards__container">
+        <div className="cards__wrapper">
+          <ul className="cards__items">
+            <CardItem
+              src={ImageFores}
+              text="Project subscription"
+              label="Adventure"
+            />
+            <CardItem
+              src={ImageFores}
+              text="Project subscription"
+              label="Luxury"
+            />
+          </ul>
+          <ul className="cards__items">
+            <CardItem
+              src={ImageFores}
+              text="Project subscription"
+              label="Mystery"
+            />
+            <CardItem
+              src={ImageFores}
+              text="Project subscription"
+              label="Adventure"
+            />
+            <CardItem
+              src={ImageFores}
+              text="Project subscription"
+              label="Adrenaline"
+            />
+          </ul>
+        </div>
       </div>
     </div>
   );
-};
+}
 
 export default Works;
