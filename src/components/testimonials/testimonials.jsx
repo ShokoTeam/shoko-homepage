@@ -14,7 +14,7 @@ import Feedback from "../ui-components/feedback/feedback.jsx";
 const testimonials = () => {
   const pagination = {
     clickable: true,
-    renderBullet: function (index, className) {
+    renderBullet: function(index, className) {
       return '<span class="' + className + '">' + (index + 1) + "</span>";
     },
   };
@@ -35,7 +35,7 @@ const testimonials = () => {
             spaceBetween: 50,
           },
           1024: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 10,
           },
 

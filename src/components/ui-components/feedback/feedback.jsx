@@ -13,7 +13,7 @@ const Feedback = (props) => {
       <div className="content__container">
         <h3 className="feedback__text">{props.text}</h3>
         <div className="profile__content">
-          <Avatar className="profile__image" />
+          <Avatar mr={2} h={35} w={35} />
           <h3 className="profile__name">@{props.name}</h3>
         </div>
       </div>

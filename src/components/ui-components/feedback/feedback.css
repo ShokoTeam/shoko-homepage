@@ -9,14 +9,14 @@
   justify-content: center;
   align-items: center;
 }
+.feedback__text {
+  width: 70%;
+  transition: 0.4s color ease-in-out;
+}
 .profile__content {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.profile__image {
-  height: 45px;
-  width: 45px;
 }
 
 .not-active {

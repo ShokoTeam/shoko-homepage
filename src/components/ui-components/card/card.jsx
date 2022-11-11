@@ -38,7 +38,7 @@ const Card = (props) => {
           </li>
         </ul>
         <div className="details">
-          <Text fontWeight="bold" pt={6}>{props.name}</Text>
+          <Text fontWeight="bold" pt={4}>{props.name}</Text>
           <span className="job-title">{props.job}</span>
         </div>
       </div>
