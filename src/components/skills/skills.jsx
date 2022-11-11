@@ -11,7 +11,8 @@ import { IconContext } from 'react-icons';
 import "./skills.css"
 
 import { FaDesktop } from "react-icons/fa"
-
+import { HiOutlineDevicePhoneMobile } from "react-icons/hi2"
+import { MdDraw } from "react-icons/md"
 
 function ServicesWrapper({ children }) {
   return (
@@ -129,7 +130,7 @@ export default function ThreeTierSevices() {
                     color: "black"
                   }}
                 >
-                  <FaDesktop />
+                  <HiOutlineDevicePhoneMobile />
                 </IconContext.Provider>
 
               </Text>
@@ -181,7 +182,7 @@ export default function ThreeTierSevices() {
                     color: "black"
                   }}
                 >
-                  <FaDesktop />
+                  <MdDraw />
                 </IconContext.Provider>
 
               </Text>
