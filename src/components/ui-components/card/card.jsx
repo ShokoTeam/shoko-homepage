@@ -6,6 +6,7 @@ import {
   FaYoutube,
   FaBehanceSquare,
 } from "react-icons/fa";
+import { Text } from "@chakra-ui/react";
 
 const Card = (props) => {
   return (
@@ -37,7 +38,7 @@ const Card = (props) => {
           </li>
         </ul>
         <div className="details">
-          <h2>{props.name}</h2>
+          <Text fontWeight="bold" pt={6}>{props.name}</Text>
           <span className="job-title">{props.job}</span>
         </div>
       </div>

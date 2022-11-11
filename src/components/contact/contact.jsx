@@ -4,7 +4,7 @@ import Logo from "../../images/logo_white.png";
 import Form from "../ui-components/form/form.jsx";
 import Footer from "../footer/footer.jsx";
 
-const contact = () => {
+const Contact = () => {
   return (
     <div className="contact__container">
       <div className="contact__content">
@@ -17,4 +17,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

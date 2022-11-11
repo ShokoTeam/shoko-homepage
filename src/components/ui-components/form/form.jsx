@@ -28,7 +28,7 @@ const Form = () => {
         <FormLabel></FormLabel>
         <Input
           h="35px"
-          w="320px"
+          w="310px"
           placeholder="Name"
           borderRadius={10}
           fontSize={18}
@@ -42,7 +42,7 @@ const Form = () => {
         <FormLabel></FormLabel>
         <Input
           h="35px"
-          w="320px"
+          w="310px"
           placeholder="E-Mail"
           borderRadius={10}
           fontSize={18}
@@ -54,7 +54,7 @@ const Form = () => {
           onChange={handleInputChange}
         />
         {!isError ? (
-          <FormHelperText color={"gray"} fontSize={12} mt={5}>
+          <FormHelperText color={"gray"} fontSize={12} >
             Enter the email you'd like to receive the newsletter on
           </FormHelperText>
         ) : (
@@ -64,15 +64,16 @@ const Form = () => {
         <FormLabel></FormLabel>
         <Input
           h="215px"
-          w="320px"
+          w="310px"
           placeholder="Message"
           borderRadius={10}
           fontSize={18}
           border="1px solid #fff"
           pl={"1rem"}
           pb={"11rem"}
-          mt={40}
+          mt={4}
           type="message"
+
         />
       </FormControl>
       <Button className="form__button">Submit</Button>

@@ -9,17 +9,19 @@ import Works from "./components/works/works";
 
 import "./styles/global.css";
 import { ChakraProvider } from "@chakra-ui/react";
+import theme from "./theme"
 
 function App() {
   return (
-    <>
+
+    <ChakraProvider theme={theme}>
       <Hero />
       <Team />
       <Skills />
       <Works />
       <Testimonials />
       <Contact />
-    </>
+    </ChakraProvider>
   );
 }
 

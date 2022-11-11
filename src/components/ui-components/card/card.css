@@ -6,11 +6,10 @@
 
 .card {
   position: relative;
-  width: 310px;
+  width:280px;
   height: 375px;
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid black;
   cursor: pointer;
   transition: 0.5s;
 }
