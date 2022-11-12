@@ -19,7 +19,6 @@ const Form = () => {
   return (
     <div className="form__container">
       <FormControl
-        isInvalid={isError}
         mt={"2rem"}
         display="flex"
         flexDir="column"
@@ -53,15 +52,7 @@ const Form = () => {
           value={input}
           onChange={handleInputChange}
         />
-        {!isError ? (
-          <FormHelperText color={"gray"} fontSize={12} >
-            Enter the email you'd like to receive the newsletter on
-          </FormHelperText>
-        ) : (
-          <FormErrorMessage></FormErrorMessage>
-        )}
 
-        <FormLabel></FormLabel>
         <Input
           h="215px"
           w="310px"

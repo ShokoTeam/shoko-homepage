@@ -1,14 +1,14 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
-import CardItem from "./CardItem";
+import ProjectItem from "./ProjectItem";
 
-// #TODO: Migrate this section to Chakra UI
-//
 
 export default function Works() {
   return (
-    <Box>
-      <CardItem />
+    <Box mb={7}>
+      <ProjectItem />
+      <ProjectItem />
+      <ProjectItem />
     </Box>
   );
 }

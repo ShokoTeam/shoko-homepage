@@ -13,7 +13,7 @@ import Card from "./../ui-components/card/card.jsx";
 
 function Team() {
   return (
-    <Box py={12} mt={8} color="black">
+    <Box py={12} mt={8} color="black" alignItems="center" display="flex" flexDir="column">
       <VStack spacing={2} alignItems="center" textAlign="center">
         <Flex alignItems="center" mb={10} flexDir="column">
           <Text fontSize={24} fontWeight="bold" mb={5} maxW="80%">
