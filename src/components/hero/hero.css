@@ -16,6 +16,7 @@
 .parallax h1 {
   z-index: -1;
   color: #ffffff;
+  font-weight: bold;
   font-size: 54px;
 }
 .parallax .mask {

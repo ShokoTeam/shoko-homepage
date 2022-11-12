@@ -4,8 +4,6 @@ import {
   FormLabel,
   Input,
   Button,
-  FormHelperText,
-  FormErrorMessage,
 } from "@chakra-ui/react";
 import "./form.css";
 
@@ -14,7 +12,6 @@ const Form = () => {
 
   const handleInputChange = (e) => setInput(e.target.value);
 
-  const isError = input === "";
 
   return (
     <div className="form__container">

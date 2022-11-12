@@ -1,29 +1,40 @@
 import React from "react";
 import "./footer.css";
 import Logo from "../../images/logo_white.png";
+import {
+  Box,
+  Container,
+  Link,
+  Stack,
+  useColorModeValue,
+} from '@chakra-ui/react';
 
-const footer = () => {
+
+export default function Footer() {
   return (
-    <div className="footer__container">
-      <div className="link__container">
-        <a href="#">
-          <img src={Logo} alt="shoko" className="footer__logo" />
-        </a>
-        <a href="">
-          <p className="footer__link">Donate</p>
-        </a>
-        <a href="">
-          <p className="footer__link">Github</p>
-        </a>
-        <a href="">
-          <p className="footer__link">VK</p>
-        </a>
-        <a href="">
-          <p className="footer__link">Privacy Policy</p>
-        </a>
-      </div>
-    </div>
-  );
-};
+    <Box
+      bg='gray.750'
+      color={useColorModeValue('white', 'gray.100')}
+      mt={8}
+    >
+      <Container
+        as={Stack}
+        maxW={'6xl'}
+        py={4}
+        spacing={4}
+        justify={'center'}
+        align={'center'}
+        direction={{ base: 'column', md: 'row-reverse' }}
+      >
 
-export default footer;
+        <Stack direction={'row'} spacing={6} alignItems="center" justifyContent="center">
+          <Link href={'#'}>Home</Link>
+          <Link href={'https://github.com/ShokoTeam'}>Github</Link>
+          <Link href={'#'}>Donate</Link>
+          <Link href={'#'}>Privacy Policy</Link>
+        </Stack>
+        <img src={Logo} alt="shoko" className="footer__logo" />
+      </Container>
+    </Box>
+  );
+}
