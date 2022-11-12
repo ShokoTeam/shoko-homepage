@@ -31,7 +31,7 @@ const BlogTags = (props) => {
 
 export const BlogAuthor = (props) => {
   return (
-    <HStack color={useColorModeValue("gray.200", "gray.700")} mt={5} spacing="2" display="flex" alignItems="center">
+    <HStack color={useColorModeValue("gray.200", "black.700")} mt={5} spacing="2" display="flex" alignItems="center">
       <Image
         borderRadius="full"
         boxSize="40px"
@@ -49,7 +49,6 @@ export const BlogAuthor = (props) => {
 const ProjectItem = () => {
   return (
     <Container maxW={'7xl'} p="12">
-      <Heading as="h1">Stories by Chakra Templates</Heading>
       <Box
         marginTop={{ base: '1', sm: '5' }}
         display="flex"
@@ -106,14 +105,14 @@ const ProjectItem = () => {
           marginTop={{ base: '3', sm: '0' }}>
           <BlogTags tags={['Design', 'Development']} />
           <Heading mt={4}>
-            <Link color={useColorModeValue("gray.200", "gray.700")} textDecoration="none" _hover={{ textDecoration: 'none' }}>
+            <Link color={useColorModeValue("gray.200", "black")} textDecoration="none" _hover={{ textDecoration: 'none' }}>
               Blog article title
             </Link>
           </Heading>
           <Text
             as="p"
             marginTop="2"
-            color={useColorModeValue('gray.200', 'gray.700')}
+            color={useColorModeValue('gray.200', 'black')}
             fontSize="lg">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
