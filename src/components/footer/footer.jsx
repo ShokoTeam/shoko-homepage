@@ -4,10 +4,10 @@ import Logo from "../../images/logo_white.png";
 import {
   Box,
   Container,
-  Link,
   Stack,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { Link } from "react-router-dom"
 
 
 export default function Footer() {
@@ -28,10 +28,10 @@ export default function Footer() {
       >
 
         <Stack direction={'row'} spacing={6} alignItems="center" justifyContent="center">
-          <Link href={'#'}>Home</Link>
-          <Link href={'https://github.com/ShokoTeam'}>Github</Link>
-          <Link href={'#'}>Donate</Link>
-          <Link href={'#'}>Privacy Policy</Link>
+          {/* <Link to={'#'}>Home</Link> */}
+          {/* <Link to={'https://github.com/ShokoTeam'}>Github</Link> */}
+          {/* <Link to={'#'}>Donate</Link> */}
+          <Link to={'/privacy'}>Privacy Policy</Link>
         </Stack>
         <img src={Logo} alt="shoko" className="footer__logo" />
       </Container>

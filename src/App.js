@@ -13,7 +13,6 @@ import theme from "./theme"
 
 function App() {
   return (
-
     <ChakraProvider theme={theme}>
       <Hero />
       <Team />
