@@ -19,7 +19,7 @@ const BlogTags = (props) => {
     <HStack spacing={2} marginTop={props.marginTop}>
       {props.tags.map((tag) => {
         return (
-          <Tag size={'md'} variant="solid" colorScheme="teal" key={tag}>
+          <Tag size={'md'} variant="solid" colorScheme="blue" key={tag}>
             {tag}
           </Tag>
         );
@@ -31,7 +31,7 @@ const BlogTags = (props) => {
 
 export const BlogAuthor = (props) => {
   return (
-    <HStack color={useColorModeValue("gray.200", "black.700")} mt={5} spacing="2" display="flex" alignItems="center">
+    <HStack color="black" mt={5} spacing="2" display="flex" alignItems="center">
       <Image
         borderRadius="full"
         boxSize="40px"
@@ -105,14 +105,14 @@ const ProjectItem = () => {
           marginTop={{ base: '3', sm: '0' }}>
           <BlogTags tags={['Design', 'Development']} />
           <Heading mt={4}>
-            <Link color={useColorModeValue("gray.200", "black")} textDecoration="none" _hover={{ textDecoration: 'none' }}>
+            <Link color="black" textDecoration="none" _hover={{ textDecoration: 'none' }}>
               Blog article title
             </Link>
           </Heading>
           <Text
             as="p"
             marginTop="2"
-            color={useColorModeValue('gray.200', 'black')}
+            color='black'
             fontSize="lg">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text

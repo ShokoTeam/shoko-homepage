@@ -21,7 +21,7 @@ function ServicesWrapper({ children }) {
       w={280}
       h={340}
       shadow="base"
-      backgroundColor={useColorModeValue('blue.300', '#17173d')}
+      backgroundColor='#17173d'
       alignSelf={{ base: 'center', lg: 'flex-start' }}
       borderColor={useColorModeValue('gray.200', 'gray.500')}
       borderRadius={'xl'}
