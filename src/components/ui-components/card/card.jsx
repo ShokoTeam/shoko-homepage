@@ -7,7 +7,7 @@ import {
   FaYoutube,
   FaBehanceSquare,
 } from "react-icons/fa";
-import { Text } from "@chakra-ui/react";
+import { Link, Text } from "@chakra-ui/react";
 
 const cardAnimation = {
   hidden: {
@@ -19,12 +19,13 @@ const cardAnimation = {
   })
 }
 
+
 const Card = (props) => {
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ amount: 1 }}
+      viewport={{ amount: 1, once: true }}
       variants={cardAnimation}
     >
       <div className="card">
@@ -33,29 +34,29 @@ const Card = (props) => {
         </div>
         <ul className="social-icons">
           <li>
-            <a href="#">
+            <Link href="#">
               <FaGithubSquare />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link href="#">
               <FaTelegram />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link href="#">
               <FaYoutube />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link href="#">
               <FaBehanceSquare />
-            </a>
+            </Link>
           </li>
         </ul>
         <div className="details">
           <Text fontWeight="bold" pt={4}>{props.name}</Text>
-          <span className="job-title">{props.job}</span>
+          <span className="role-title">{props.job}</span>
         </div>
       </div>
     </motion.div>

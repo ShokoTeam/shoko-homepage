@@ -1,9 +1,12 @@
 import React from 'react'
+import Footer from "../components/footer/footer"
 
-const privacy = () => {
+const Privacy = () => {
   return (
-    <div>privacy</div>
+    <>
+      <Footer />
+    </>
   )
 }
 
-export default privacy
+export default Privacy

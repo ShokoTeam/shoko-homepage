@@ -8,7 +8,7 @@ import {
   Flex,
 } from '@chakra-ui/react';
 import { IconContext } from 'react-icons';
-import "./skills.css"
+import "./services.css"
 
 import { FaDesktop } from "react-icons/fa"
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2"
@@ -17,9 +17,9 @@ import { MdDraw } from "react-icons/md"
 function ServicesWrapper({ children }) {
   return (
     <Box
-      mb={4}
-      w={280}
       h={340}
+      w={280}
+      mb={4}
       shadow="base"
       backgroundColor='#17173d'
       alignSelf={{ base: 'center', lg: 'flex-start' }}
@@ -34,7 +34,6 @@ function ServicesWrapper({ children }) {
 export default function ThreeTierSevices() {
   return (
     <Box py={12} mt={8} >
-
       <VStack spacing={2} textAlign="center" >
         <Heading color="black" as="h1" fontSize="4xl" mb={8}>
           Services
@@ -44,12 +43,12 @@ export default function ThreeTierSevices() {
       <Stack
         bgGradient='linear(to-tl, #0F346E, #ED2D87)'
         backgroundColor={useColorModeValue('tan', '#22273A')}
+        h={450}
         direction={{ base: 'column', md: 'row' }}
         textAlign="center"
         justify="center"
         spacing={{ base: 4, lg: 10 }}
         py={10}
-        mt={7}
       >
         <ServicesWrapper>
           <Box position="relative"

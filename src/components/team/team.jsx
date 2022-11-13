@@ -63,6 +63,7 @@ function Team() {
         direction={{ base: 'column', md: 'row' }}
         textAlign="center"
         justify="center"
+        flexWrap={"wrap"}
         spacing={{ base: 3, lg: 3 }}
         py={10}
       >
