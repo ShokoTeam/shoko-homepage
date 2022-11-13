@@ -1,6 +1,4 @@
 import React from "react";
-import "./footer.css";
-import Logo from "../../images/logo_white.png";
 import {
   Box,
   Container,
@@ -8,6 +6,10 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { Link } from "react-router-dom"
+
+import "./footer.css";
+
+import Logo from "../../images/logo_white.png";
 
 
 export default function Footer() {

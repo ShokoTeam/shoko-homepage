@@ -1,14 +1,23 @@
 import React from "react";
+import {
+  Heading,
+  Text,
+  Stack,
+  Box,
+  VStack,
+  Flex
+} from "@chakra-ui/react";
 import { motion } from "framer-motion"
+
 import "./team.css";
+
+import Card from "./../ui-components/card/card.jsx";
 
 import Hleb from "../../images/StaffCats/Hleb.jpg";
 import Daria from "../../images/StaffCats/artiskat.png";
 import Pasha from "../../images/StaffCats/shoshi.png";
 import Ruslan from "../../images/StaffCats/ruslan.jpg";
 
-import { Heading, Text, Stack, Box, VStack, Flex } from "@chakra-ui/react";
-import Card from "./../ui-components/card/card.jsx";
 
 
 const textAnimation = {

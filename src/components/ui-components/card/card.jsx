@@ -1,13 +1,15 @@
 import React from "react";
+import { Link, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion"
+
 import "./card.css";
+
 import {
   FaGithubSquare,
   FaTelegram,
   FaYoutube,
   FaBehanceSquare,
 } from "react-icons/fa";
-import { Link, Text } from "@chakra-ui/react";
 
 const cardAnimation = {
   hidden: {

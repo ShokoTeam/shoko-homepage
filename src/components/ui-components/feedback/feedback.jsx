@@ -1,7 +1,8 @@
 import React from "react";
-import "./feedback.css";
 import { Avatar } from "@chakra-ui/react";
 import { useSwiperSlide } from "swiper/react";
+
+import "./feedback.css";
 
 const Feedback = (props) => {
   const swiperSlide = useSwiperSlide();

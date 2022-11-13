@@ -1,17 +1,16 @@
 import React from "react";
-import "./testimonials.css";
-
-import "swiper/css";
-import "swiper/css/navigation";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper";
+
+import "./testimonials.css";
+import "swiper/css";
+import "swiper/css/navigation";
 
 import Feedback from "../ui-components/feedback/feedback.jsx";
 
 // TODO: Delete hardcode text value in Feedback and create data source
 
-const testimonials = () => {
+const Testimonials = () => {
   const pagination = {
     clickable: true,
     renderBullet: function(index, className) {
@@ -97,4 +96,4 @@ const testimonials = () => {
   );
 };
 
-export default testimonials;
+export default Testimonials;

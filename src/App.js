@@ -1,4 +1,3 @@
-import "./App.css";
 
 import Team from "./components/team/team.jsx";
 import Services from "./components/services/services.jsx";

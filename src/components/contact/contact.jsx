@@ -1,6 +1,9 @@
 import React from "react";
+
 import "./contact.css";
+
 import Logo from "../../images/logo_white.png";
+
 import Form from "../ui-components/form/form.jsx";
 import Footer from "../footer/footer.jsx";
 

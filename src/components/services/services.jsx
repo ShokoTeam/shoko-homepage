@@ -1,3 +1,4 @@
+import React from "react"
 import {
   Box,
   Stack,
@@ -7,9 +8,10 @@ import {
   useColorModeValue,
   Flex,
 } from '@chakra-ui/react';
-import { IconContext } from 'react-icons';
+
 import "./services.css"
 
+import { IconContext } from 'react-icons';
 import { FaDesktop } from "react-icons/fa"
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2"
 import { MdDraw } from "react-icons/md"

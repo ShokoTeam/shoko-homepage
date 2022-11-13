@@ -1,9 +1,11 @@
 import React from "react";
+import { Text } from "@chakra-ui/react";
 import { motion } from "framer-motion"
+
+import "./hero.css";
+
 import Logo from "../../images/logo_white.png";
 import Arrow from "../../images/icons/ArrowDown.svg";
-import "./hero.css";
-import { Text } from "@chakra-ui/react";
 
 const textAnimation = {
   hidden: {
@@ -16,7 +18,6 @@ const textAnimation = {
     transition: { delay: custom * 0.2 }
   })
 }
-
 
 const Hero = () => {
   return (
@@ -33,7 +34,7 @@ const Hero = () => {
               <motion.h1 custom={1} variants={textAnimation} >
                 Shoko
               </motion.h1>
-              <motion.p custom={2} variants={textAnimation}>App development, and other</motion.p>
+              <Text as={motion.p} fontSize={20} custom={2} variants={textAnimation}>App development, and other</Text>
             </div>
             <img src={Arrow} alt="arrow" className="hero__arrow" />
           </div>
