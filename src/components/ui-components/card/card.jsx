@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion"
 import "./card.css";
 import {
   FaGithubSquare,
@@ -8,9 +9,24 @@ import {
 } from "react-icons/fa";
 import { Text } from "@chakra-ui/react";
 
+const cardAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: custom => ({
+    opacity: 1,
+    transition: { delay: custom * 0.2 }
+  })
+}
+
 const Card = (props) => {
   return (
-    <div>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 1 }}
+      variants={cardAnimation}
+    >
       <div className="card">
         <div className="card-image">
           <img src={props.image} alt="cat" />
@@ -42,7 +58,7 @@ const Card = (props) => {
           <span className="job-title">{props.job}</span>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

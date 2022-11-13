@@ -5,7 +5,7 @@ import ProjectItem from "./ProjectItem";
 
 export default function Works() {
   return (
-    <Box mb={7}>
+    <Box md={8}>
       <ProjectItem />
       <ProjectItem />
       <ProjectItem />

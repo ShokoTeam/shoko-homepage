@@ -44,6 +44,7 @@
   color: var(--text-color-w);
   text-align: center;
 }
+
 .hero__heading {
   color: var(--text-color-w);
   text-shadow: 4px 2px 1px rgba(150, 150, 150, 1);

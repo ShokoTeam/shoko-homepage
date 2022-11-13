@@ -26,11 +26,10 @@ export default function Footer() {
         align={'center'}
         direction={{ base: 'column', md: 'row-reverse' }}
       >
-
         <Stack direction={'row'} spacing={6} alignItems="center" justifyContent="center">
-          {/* <Link to={'#'}>Home</Link> */}
-          {/* <Link to={'https://github.com/ShokoTeam'}>Github</Link> */}
-          {/* <Link to={'#'}>Donate</Link> */}
+          <Link to={'/'}>Home</Link>
+          <a href='https://github.com/ShokoTeam'>Github</a>
+          <a href={'#'}>Donate</a>
           <Link to={'/privacy'}>Privacy Policy</Link>
         </Stack>
         <img src={Logo} alt="shoko" className="footer__logo" />

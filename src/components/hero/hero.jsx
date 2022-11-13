@@ -7,11 +7,11 @@ import { Text } from "@chakra-ui/react";
 
 const textAnimation = {
   hidden: {
-    x: -100,
+    y: -100,
     opacity: 0,
   },
   visible: custom => ({
-    x: 0,
+    y: 0,
     opacity: 1,
     transition: { delay: custom * 0.2 }
   })
@@ -33,7 +33,7 @@ const Hero = () => {
               <motion.h1 custom={1} variants={textAnimation} >
                 Shoko
               </motion.h1>
-              <Text>App development, and other</Text>
+              <motion.p custom={2} variants={textAnimation}>App development, and other</motion.p>
             </div>
             <img src={Arrow} alt="arrow" className="hero__arrow" />
           </div>
