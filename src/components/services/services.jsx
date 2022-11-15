@@ -98,7 +98,7 @@ export default function ThreeTierSevices() {
               Web
             </Text>
             <Text textAlign="center" maxW="80%" mt={4}>
-              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+              Website development is one of our main areas of expertise, because websites are always needed by everyone.
             </Text>
           </Flex>
         </ServicesWrapper>
@@ -150,7 +150,7 @@ export default function ThreeTierSevices() {
               Mobile
             </Text>
             <Text textAlign="center" maxW="80%" mt={4}>
-              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+              Mobile development is like a hobby for us, a hobby which we accomplish well.
             </Text>
           </Flex>
         </ServicesWrapper>
@@ -202,7 +202,7 @@ export default function ThreeTierSevices() {
               UX / UI Design
             </Text>
             <Text textAlign="center" maxW="80%" mt={4}>
-              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+              Design is needed for all of our projects. We try to make it comfortable and pleasant for the eyes, and most importantly - functional.
             </Text>
           </Flex>
         </ServicesWrapper>
