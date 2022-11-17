@@ -1,4 +1,6 @@
-import React from "react"
+import React, { useEffect, useRef, useState } from "react";
+import WAVES from "vanta/dist/vanta.waves.min";
+import * as THREE from "three";
 import {
   Box,
   Text,
@@ -31,16 +33,42 @@ function ServicesWrapper({ children, backgroundColor }) {
 }
 
 export default function ThreeTierSevices() {
+  const [vantaEffect, setVantaEffect] = useState(0);
+  const vantaRef = useRef(null);
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(
+        WAVES({
+          el: vantaRef.current,
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x373739,
+          shininess: 0.00,
+          waveSpeed: 0.85,
+          zoom: 0.77,
+          THREE,
+          backgroundColor: 0x15173c,
+          maxDistance: 34.0,
+        })
+      );
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destory();
+    };
+  }, [vantaEffect]);
   return (
-    <Box py={12} mt={8} >
+    <Box ref={vantaRef} py={12} mt={8} >
       <VStack spacing={2} textAlign="center" >
         <AnimHeading title={"Services"}></AnimHeading>
 
       </VStack>
 
       <Flex
-        bgGradient='linear(to-tl, #0F346E, #ED2D87)'
-        backgroundColor={useColorModeValue('tan', '#22273A')}
         direction={{ base: 'column', md: 'row-reverse' }}
         textAlign="center"
         justify="center"
@@ -206,3 +234,5 @@ export default function ThreeTierSevices() {
     </Box>
   );
 }
+
+
