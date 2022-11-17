@@ -23,16 +23,16 @@ export default function Footer() {
         as={Stack}
         maxW={'6xl'}
         py={4}
-        spacing={4}
+        spacing={3}
         justify={'center'}
         align={'center'}
         direction={{ base: 'column', md: 'row-reverse' }}
       >
-        <Stack mr={5} direction={'row'} spacing={9} alignItems="center" justifyContent="center">
+        <Stack my={4} fontSize={{ base: "14px", md: "16px" }} direction={{ base: 'row', sm: 'row' }} spacing={7} align="center" justifyContent="center">
           <Link to={'/'}>Home</Link>
           <a href='https://github.com/ShokoTeam'>Github</a>
           <a href={'/'}>Donate</a>
-          <Link to={'/privacy'}>Privacy Policy</Link>
+          <Link to={'/privacy'}>Privacy</Link>
         </Stack>
         <img src={Logo} alt="shoko" className="footer__logo" />
       </Container>

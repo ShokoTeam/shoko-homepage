@@ -18,7 +18,6 @@ const textAnimation = {
     transition: { delay: custom * 0.2 }
   })
 }
-
 const Hero = () => {
   return (
     <motion.div
