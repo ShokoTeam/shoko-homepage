@@ -4,7 +4,7 @@ import "./contact.css";
 
 import Logo from "../../images/logo_white.png";
 
-import Form from "../ui-components/form/form.jsx";
+import FormCustom from "../ui-components/form/form.jsx";
 
 import Footer from "../footer/footer.jsx";
 
@@ -14,7 +14,7 @@ const Contact = () => {
       <div className="contact__content">
         <img src={Logo} alt="logo" className="contact__logo" />
         <h3 className="contact__heading">Contact Us</h3>
-        <Form />
+        <FormCustom />
       </div>
       <Footer />
     </div>

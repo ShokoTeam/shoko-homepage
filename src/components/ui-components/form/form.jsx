@@ -1,73 +1,42 @@
-import React, { useState } from "react";
-import {
-  FormControl,
-  FormLabel,
-  Input,
-  Button,
-} from "@chakra-ui/react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser"
 
 import "./form.css";
+import { useToast } from "@chakra-ui/react";
 
-const Form = () => {
-  const [input, setInput] = useState("");
 
-  const handleInputChange = (e) => setInput(e.target.value);
 
+export const FormCustom = () => {
+
+  const form = useRef();
+  const toast = useToast()
+  const toastIdRef = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_djoteqs', 'template_at09pjo', form.current, '0SFZsqlAF3DAgAqfz')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+    e.target.reset()
+
+    toastIdRef.current = toast({ title: 'Thank You!', status: "success", isClosable: true })
+  };
 
   return (
     <div className="form__container">
-      <FormControl
-        mt={"2rem"}
-        display="flex"
-        flexDir="column"
-        alignItems="center"
-      >
-        <FormLabel></FormLabel>
-        <Input
-          h="35px"
-          w="310px"
-          placeholder="Name"
-          borderRadius={10}
-          fontSize={18}
-          border="1px solid #fff"
-          type="name"
-          pl={"1rem"}
-          p={15}
-          mt={23}
-        />
-
-        <FormLabel></FormLabel>
-        <Input
-          h="35px"
-          w="310px"
-          placeholder="E-Mail"
-          borderRadius={10}
-          fontSize={18}
-          border="1px solid #fff"
-          pl={"1rem"}
-          mt={15}
-          type="email"
-          value={input}
-          onChange={handleInputChange}
-        />
-
-        <Input
-          h="215px"
-          w="310px"
-          placeholder="Message"
-          borderRadius={10}
-          fontSize={18}
-          border="1px solid #fff"
-          pl={"1rem"}
-          pb={"11rem"}
-          mt={4}
-          type="message"
-
-        />
-      </FormControl>
-      <Button className="form__button">Submit</Button>
+      <form className="form" ref={form} onSubmit={sendEmail}>
+        <input className="input__name" placeholder='Name' type="text" name="user_name" />
+        <input className="input__email" placeholder="E-Mail" type="email" name="user_email" />
+        <textarea className="input__message" placeholder="Your message" name="message" />
+        <button className="form__button" onSubmit={sendEmail}>Submit</button>
+      </form>
     </div>
   );
 };
 
-export default Form;
+
+export default FormCustom
