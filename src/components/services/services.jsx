@@ -48,9 +48,11 @@ export default function ThreeTierSevices() {
         justify="center"
         alignItems="center"
         flexWrap='wrap'
-        gap={{base: "4", lg: "10"}}
+        gap={{ base: "4", lg: "10" }}
         py={28}
       >
+
+
         <ServicesWrapper
           backgroundColor='#17173d'
         >
@@ -95,7 +97,7 @@ export default function ThreeTierSevices() {
               Mobile
             </Text>
             <Text textAlign="center" maxW="80%" mt={4}>
-              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+              Mobile development is like a hobby for us, a hobby which we accomplish well.
             </Text>
           </Flex>
         </ServicesWrapper>
@@ -198,60 +200,7 @@ export default function ThreeTierSevices() {
               UX / UI Design
             </Text>
             <Text textAlign="center" maxW="80%" mt={4}>
-              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-            </Text>
-          </Flex>
-        </ServicesWrapper>
-
-        <ServicesWrapper
-          backgroundColor='#17173d'
-        >
-          <Box position="relative"
-          >
-            <Box
-              position="absolute"
-              top="-16px"
-              left="50%"
-              style={{ transform: 'translate(-50%)' }}>
-
-              <Text
-                textTransform="uppercase"
-                bg="white"
-                px={2}
-                py={2}
-                color={useColorModeValue('gray.900', 'gray.300')}
-                fontSize="sm"
-                fontWeight="600"
-                rounded="xl"
-              >
-                <IconContext.Provider
-                  value={{
-                    className: "icons",
-                    size: 45,
-                    alignItems: "center",
-                    color: "black"
-                  }}
-                >
-                  <MdDraw />
-                </IconContext.Provider>
-
-              </Text>
-
-            </Box>
-
-          </Box>
-
-          <Flex
-            position="relative"
-            top="35%"
-            flexDir="column"
-            alignItems="center"
-          >
-            <Text fontSize={24} fontWeight="bold" maxW="80%" >
-              Desktop Dev
-            </Text>
-            <Text textAlign="center" maxW="80%" mt={4}>
-              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+              Design is needed for all of our projects. We try to make it comfortable and pleasant for the eyes, and most importantly - functional.
             </Text>
           </Flex>
         </ServicesWrapper>
