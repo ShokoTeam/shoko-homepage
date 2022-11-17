@@ -1,7 +1,6 @@
 import React from "react"
 import {
   Box,
-  Heading,
   Text,
   VStack,
   useColorModeValue,
@@ -14,6 +13,7 @@ import { IconContext } from 'react-icons';
 import { FaDesktop } from "react-icons/fa"
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2"
 import { MdDraw } from "react-icons/md"
+import AnimHeading from "../ui-components/anim-heading/AnimHeading";
 
 function ServicesWrapper({ children, backgroundColor }) {
   return (
@@ -34,9 +34,7 @@ export default function ThreeTierSevices() {
   return (
     <Box py={12} mt={8} >
       <VStack spacing={2} textAlign="center" >
-        <Heading color="black" as="h1" fontSize="4xl" mb={8}>
-          Services
-        </Heading>
+        <AnimHeading title={"Services"}></AnimHeading>
 
       </VStack>
 

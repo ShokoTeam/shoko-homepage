@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Heading,
   Text,
   Stack,
   Box,
@@ -17,6 +16,7 @@ import Hleb from "../../images/StaffCats/Hleb.jpg";
 import Daria from "../../images/StaffCats/artiskat.png";
 import Pasha from "../../images/StaffCats/shoshi.png";
 import Ruslan from "../../images/StaffCats/ruslan.jpg";
+import AnimHeading from "../ui-components/anim-heading/AnimHeading";
 
 
 
@@ -32,15 +32,6 @@ const textAnimation = {
   })
 }
 
-const titleAnimation = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: custom => ({
-    opacity: 1,
-    transition: { delay: custom * 0.2 }
-  })
-}
 
 
 
@@ -64,9 +55,7 @@ function Team() {
             achieve a lot
           </Text>
         </Flex>
-        <Heading as={motion.h2} variants={titleAnimation} custom={2} color="black" fontSize="4xl">
-          Our Team
-        </Heading>
+        <AnimHeading custom={2}>Our Team</AnimHeading>
       </VStack>
       <Stack
         direction={{ base: 'column', md: 'row' }}
