@@ -10,6 +10,7 @@ import {
   FaYoutube,
   FaBehanceSquare,
 } from "react-icons/fa";
+import { IconContext } from "react-icons";
 
 const cardAnimation = {
   hidden: {
@@ -37,24 +38,66 @@ const Card = (props) => {
         </div>
 
         <ul className="social-icons">
-          <li>
-            <Link href="#">
-              <FaGithubSquare />
+          <li className="link">
+            <Link href="https://github.com/craftzdog/dotfiles-public/tree/master/.config">
+              <IconContext.Provider
+                value={{
+                  className: "icons",
+                  size: 35,
+                  alignItems: "center",
+                }}
+              >
+                <div className="github">
+                  <FaGithubSquare />
+                </div>
+              </IconContext.Provider>
             </Link>
           </li>
-          <li>
-            <Link href="#">
-              <FaTelegram />
+
+          <li className="link">
+            <Link href="https://github.com/craftzdog/dotfiles-public/tree/master/.config">
+              <IconContext.Provider
+                value={{
+                  className: "icons",
+                  size: 35,
+                  alignItems: "center",
+                }}
+              >
+                <div className="telegram">
+                  <FaTelegram />
+                </div>
+              </IconContext.Provider>
             </Link>
           </li>
-          <li>
-            <Link href="#">
-              <FaYoutube />
+          <li className="link">
+            <Link href="https://github.com/craftzdog/dotfiles-public/tree/master/.config">
+              <IconContext.Provider
+                value={{
+                  className: "icons",
+                  size: 35,
+                  alignItems: "center",
+                }}
+              >
+                <div className="youtube">
+                  <FaYoutube />
+                </div>
+              </IconContext.Provider>
             </Link>
           </li>
-          <li>
-            <Link href="#">
-              <FaBehanceSquare />
+
+          <li className="link">
+            <Link href="https://github.com/craftzdog/dotfiles-public/tree/master/.config">
+              <IconContext.Provider
+                value={{
+                  className: "icons",
+                  size: 35,
+                  alignItems: "center",
+                }}
+              >
+                <div className="behance">
+                  <FaBehanceSquare />
+                </div>
+              </IconContext.Provider>
             </Link>
           </li>
         </ul>

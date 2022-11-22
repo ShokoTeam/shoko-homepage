@@ -44,21 +44,48 @@
 }
 
 .social-icons li a {
+  display: flex;
+  justify-content: center;
   position: relative;
-  display: block;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   line-height: 50px;
   text-align: center;
-  background: #fff;
   font-size: 24px;
   color: #333;
-  margin: 0 2px;
   transition: 0.5s;
   transform: translateY(200px);
   opacity: 0;
   visibility: hidden;
 }
+
+.link:hover {
+  transform: scale(1.2);
+  transition: color 0.4s 0s ease-out;
+
+}
+
+.github:hover {
+  color: #091540;
+  transition: color 0.4s 0s ease-out;
+}
+
+.telegram:hover {
+  color: #27A7E7;
+  transition: color 0.4s 0s ease-out;
+}
+
+.youtube:hover {
+  color: #FA0C00;
+  transition: color 0.4s 0s ease-out;
+}
+
+.behance:hover {
+  color:#1B2CC1;
+  transition: color 0.4s 0s ease-out;
+}
+
+
 
 .details {
   position: absolute;
