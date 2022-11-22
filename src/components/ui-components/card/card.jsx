@@ -29,11 +29,13 @@ const Card = (props) => {
       whileInView="visible"
       viewport={{ amount: 1, once: true }}
       variants={cardAnimation}
+      className="card__container"
     >
       <div className="card">
         <div className="card-image">
           <img src={props.image} alt="cat" />
         </div>
+
         <ul className="social-icons">
           <li>
             <Link href="#">
