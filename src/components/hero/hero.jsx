@@ -23,7 +23,7 @@ const Hero = () => {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      className="wrapper"
+      className="hero__wrapper"
     >
       <div class="parallax">
         <div class="parallax-content">

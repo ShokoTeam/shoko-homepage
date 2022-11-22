@@ -45,12 +45,12 @@ function Team() {
 
       <VStack spacing={2} alignItems="center" textAlign="center">
         <Flex alignItems="center" mb={10} flexDir="column">
-          <Text as={motion.h3} variants={textAnimation} custom={1} fontSize={24} fontWeight="bold" mb={5} maxW="80%">
+          <Text as={motion.h3} variants={textAnimation} custom={1} fontSize={24} fontWeight="bold" mb={5} maxW="1240px">
             We are ordinary people, who are united by common interests and as
             well as the desire to improve ourselvers. As we are young developer,
             we still have a lot to achieve
           </Text>
-          <Text as={motion.h3} variants={textAnimation} custom={1.5} fontSize={24} mb={15} maxW="80%">
+          <Text as={motion.h3} variants={textAnimation} custom={1.5} fontSize={24} mb={15} maxW="1240px">
             We don't know where this path would lead us to but we hope to
             achieve a lot
           </Text>

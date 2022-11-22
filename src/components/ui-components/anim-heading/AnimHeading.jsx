@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading } from "@chakra-ui/react"
+import { Box, Flex, Heading } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 
 const titleAnimation = {
@@ -12,13 +12,17 @@ const titleAnimation = {
   })
 }
 
-const AnimHeading = ({ children, custom }) => {
+const AnimHeading = ({ children, custom, color }) => {
   return (
-    <motion.div>
-      <Heading as={motion.h2} variants={titleAnimation} custom={custom} color="black" fontSize="4xl">
+    <Flex
+      as={motion.div}
+      alignItems="center"
+      justifyContent='center'
+    >
+      <Heading alignItems="center" as={motion.h2} variants={titleAnimation} custom={custom} color={color} fontSize="4xl">
         {children}
       </Heading>
-    </motion.div>
+    </Flex>
   )
 }
 
