@@ -17,6 +17,7 @@ import Daria from "../../images/StaffCats/artiskat.png";
 import Pasha from "../../images/StaffCats/shoshi.png";
 import Ruslan from "../../images/StaffCats/ruslan.jpg";
 import AnimHeading from "../ui-components/anim-heading/AnimHeading";
+import { teamInfo } from "./data";
 
 
 
@@ -65,10 +66,17 @@ function Team() {
         spacing={{ base: 3, lg: 3 }}
         py={10}
       >
-        <Card name="Pavel Lobachev" job="Tech Lead" image={Pasha} />
-        <Card name="Daria Averina" job="Illustrator" image={Daria} />
-        <Card name="Gabdraupov Ruslan" job="Writer" image={Ruslan} />
-        <Card name="Kotovsky Gleb" job="UI UX Designer" image={Hleb} />
+        {teamInfo.map(props => (
+          <Card
+            id={props.id}
+            image={props.image_url}
+            name={props.name}
+            job={props.job}
+            github={props.github}
+            telegram={props.telegram}
+          />
+
+        ))}
       </Stack>
     </Box >
   );

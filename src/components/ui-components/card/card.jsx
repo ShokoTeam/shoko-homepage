@@ -39,7 +39,7 @@ const Card = (props) => {
 
         <ul className="social-icons">
           <li className="link">
-            <Link href="https://github.com/craftzdog/dotfiles-public/tree/master/.config">
+            <Link href={props.github}>
               <IconContext.Provider
                 value={{
                   className: "icons",
@@ -55,7 +55,7 @@ const Card = (props) => {
           </li>
 
           <li className="link">
-            <Link href="https://github.com/craftzdog/dotfiles-public/tree/master/.config">
+            <Link href={props.telegram}>
               <IconContext.Provider
                 value={{
                   className: "icons",
@@ -70,7 +70,7 @@ const Card = (props) => {
             </Link>
           </li>
           <li className="link">
-            <Link href="https://github.com/craftzdog/dotfiles-public/tree/master/.config">
+            <Link href={props.youtube}>
               <IconContext.Provider
                 value={{
                   className: "icons",
@@ -86,7 +86,7 @@ const Card = (props) => {
           </li>
 
           <li className="link">
-            <Link href="https://github.com/craftzdog/dotfiles-public/tree/master/.config">
+            <Link href={props.behance}>
               <IconContext.Provider
                 value={{
                   className: "icons",
