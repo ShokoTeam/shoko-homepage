@@ -30,7 +30,7 @@ const Card = (props) => {
       viewport={{ amount: 1, once: true }}
       variants={cardAnimation}
     >
-      <div className="card">
+      <div className="card__container">
         <div className="card-image">
           <img src={props.image} alt="cat" />
         </div>

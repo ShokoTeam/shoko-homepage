@@ -4,11 +4,10 @@
   box-sizing: border-box;
 }
 
-.card {
+.card__container {
   position: relative;
   width:280px;
   height: 375px;
-  border-radius: 14px;
   overflow: hidden;
   cursor: pointer;
   transition: 0.5s;
@@ -48,16 +47,15 @@
 .social-icons li a {
   position: relative;
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   line-height: 50px;
   text-align: center;
-  background: #fff;
   font-size: 24px;
   color: #333;
   margin: 0 2px;
   transition: 0.5s;
-  transform: translateY(200px);
+  transform: translateY(300px);
   opacity: 0;
   visibility: hidden;
 }
@@ -89,38 +87,38 @@
   font-weight: 300;
 }
 
-.card:hover img {
+.card__container:hover img {
   opacity: 0.4;
   transition: 0.5s;
 }
 
-.card:hover li a {
+.card__container:hover li a {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
 }
 
-.card:hover li:nth-child(1) a {
+.card__container:hover li:nth-child(1) a {
   transition-delay: 0.1s;
 }
 
-.card:hover li:nth-child(2) a {
+.card__container:hover li:nth-child(2) a {
   transition-delay: 0.2s;
 }
 
-.card:hover li:nth-child(3) a {
+.card__container:hover li:nth-child(3) a {
   transition-delay: 0.3s;
 }
 
-.card:hover li:nth-child(4) a {
+.card__container:hover li:nth-child(4) a {
   transition-delay: 0.4s;
 }
 
-.card:hover li:nth-child(5) a {
+.card__container:hover li:nth-child(5) a {
   transition-delay: 0.5s;
 }
 
-.card:hover .card-image {
-  transform: translateY(-120px);
+.card__container:hover .card-image {
+  transform: translateY(0px);
   transition: 0.5s;
 }

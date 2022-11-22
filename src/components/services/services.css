@@ -9,3 +9,20 @@
 .icons {
   padding: 5px
 }
+
+.service__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.4rem;
+  width:200px;
+  height: 75px;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 40px;
+}
+
+.service__button h2 {
+  font-size: 24px;
+  font-weight: 600;
+}

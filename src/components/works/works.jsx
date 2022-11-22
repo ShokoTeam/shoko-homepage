@@ -6,8 +6,8 @@ import "./works.css"
 
 export default function Works() {
   return (
-    <div className='works'>
-      <AnimHeading custom={2}>
+    <div className='works__section'>
+      <AnimHeading custom={2} color="black">
         We built
       </AnimHeading>
       <div className="wrapper">
