@@ -12,10 +12,6 @@ import "./team.css";
 
 import Card from "./../ui-components/card/card.jsx";
 
-import Hleb from "../../images/StaffCats/Hleb.jpg";
-import Daria from "../../images/StaffCats/artiskat.png";
-import Pasha from "../../images/StaffCats/shoshi.png";
-import Ruslan from "../../images/StaffCats/ruslan.jpg";
 import AnimHeading from "../ui-components/anim-heading/AnimHeading";
 import { teamInfo } from "./data";
 
@@ -38,14 +34,30 @@ const textAnimation = {
 
 function Team() {
   return (
-    <Box as={motion.div}
+    <Box
+      as={motion.div}
+      display="flex"
+      flexDir="column"
+      justifyContent='center'
+      alignItems="center"
+      h={"80vh"}
       initial="hidden"
       whileInView="visible"
       viewport={{ amount: 0.3 }}
-      py={12} mt={8} color="black" alignItems="center" display="flex" flexDir="column">
-
-      <VStack spacing={2} alignItems="center" textAlign="center">
-        <Flex alignItems="center" mb={10} flexDir="column">
+      py={8}
+      mt={8}
+      color="black"
+    >
+      <VStack
+        spacing={2}
+        alignItems="center"
+        textAlign="center"
+      >
+        <Flex
+          alignItems="center"
+          mb={10}
+          flexDir="column"
+        >
           <Text as={motion.h3} variants={textAnimation} custom={1} fontSize={24} fontWeight="bold" mb={5} maxW="1240px">
             We are ordinary people, who are united by common interests and as
             well as the desire to improve ourselvers. As we are young developer,
@@ -75,7 +87,6 @@ function Team() {
             github={props.github}
             telegram={props.telegram}
           />
-
         ))}
       </Stack>
     </Box >
