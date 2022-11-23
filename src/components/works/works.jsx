@@ -9,7 +9,7 @@ export default function Works() {
   return (
     <Box
       pt={12}
-      mt={8}
+      my={8}
     >
       <VStack spacing={2} textAlign="center" >
         <AnimHeading color="black" custom={2}>
