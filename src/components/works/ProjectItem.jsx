@@ -12,6 +12,9 @@ import PashaImage from "../../images/StaffCats/shoshi.png"
 import ProjectImage from './components/project-image';
 import BlogTags from './components/blog-tags';
 import BlogAuthor from './components/blog-author';
+import BlogTools from './components/blog-tools';
+import { FaReact } from 'react-icons/fa';
+import { AiFillHtml5 } from "react-icons/ai"
 
 
 
@@ -39,7 +42,7 @@ const ProjectItem = () => {
             marginTop="5%"
             overflow="hidden"
           >
-            <ProjectImage />
+            <ProjectImage src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80" />
           </Box>
           <Box zIndex="1" width="100%" position="absolute" height="100%">
             <Box
@@ -59,16 +62,32 @@ const ProjectItem = () => {
           flexDirection="column"
           textAlign="start"
           justifyContent="center"
-          marginLeft="5"
-          marginTop={{ base: '3', sm: '0' }}>
-          <BlogTags tags={['Design', 'Development', 'test', 'test']} />
-          <Heading mt={4}>
+          // marginLeft="5"
+
+          marginLeft={{ base: '0', sm: '5' }}
+          marginTop={{ base: '2', sm: '3' }}
+        >
+          <BlogTags tags={[
+            'Design',
+            'Development',
+            'Website'
+          ]}
+          />
+          <BlogTools tools={[
+            { "scheme": 'blue', "icon": <FaReact color='black' /> },
+            { "scheme": 'orange', "icon": <AiFillHtml5 /> },
+            { "scheme": 'blue', "icon": <FaReact color='black' /> },
+            { "scheme": 'orange', "icon": <AiFillHtml5 /> },
+          ]}
+          />
+          <Heading mt={4} textAlign={{ base: "center", md: "start" }}>
             <Link
               fontWeight="bold"
               fontSize={{ base: "xl", md: "2xl" }}
               color="black"
               textDecoration="none"
-              _hover={{ textDecoration: 'none' }}>
+              _hover={{ textDecoration: 'none' }}
+            >
               Blog article title
             </Link>
           </Heading>

@@ -40,7 +40,7 @@ function Team() {
       flexDir="column"
       justifyContent='center'
       alignItems="center"
-      h={"80vh"}
+      h={{ sm: "80vh", base: "100%", md: "100%" }}
       initial="hidden"
       whileInView="visible"
       viewport={{ amount: 0.3 }}

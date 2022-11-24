@@ -3,7 +3,11 @@ import React from 'react'
 
 const BlogTags = (props) => {
   return (
-    <HStack flexWrap="wrap" spacing={2} marginTop={props.marginTop}>
+    <HStack
+      flexWrap="wrap"
+      justifyContent='start'
+      marginTop={props.marginTop}
+    >
       {props.tags.map((tag) => {
         return (
           <Tag size={'md'} my={1} variant="solid" colorScheme="blue" key={tag}>
