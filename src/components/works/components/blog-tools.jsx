@@ -6,11 +6,11 @@ const BlogTools = (props) => {
     <HStack
       flexWrap="wrap"
       spacing={2}
-      justifyContent={{base: "center", sm: "start"}}
+      justifyContent={{ base: "center", sm: "start" }}
     >
       {props.tools.map((value, key) => {
         return (
-          <Tag size={'lg'} my={1} p={2} variant="solid" alignItems='center' justifyContent='center' colorScheme={value.scheme} key={key}>
+          <Tag borderRadius="20px" size={'lg'} my={1} p={2} variant="outline" alignItems='center' justifyContent='center' colorScheme="gray" key={key}>
             {value.icon}
           </Tag>
         );

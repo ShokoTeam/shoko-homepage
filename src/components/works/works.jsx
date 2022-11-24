@@ -5,8 +5,13 @@ import AnimHeading from "../ui-components/anim-heading/AnimHeading";
 import ProjectItem from "../works/ProjectItem"
 import ComingSoon from "./components/coming-soon";
 import CustomTab from "./tabs-motion";
+import { works } from "./data.js"
 import "./works.css"
 
+import { FaReact } from 'react-icons/fa';
+import * as DevIcon from "react-icons/di"
+import BlogTools from './components/blog-tools';
+import BlogIcon from './components/blog-icon';
 
 export default function Works() {
   return (
@@ -65,13 +70,30 @@ export default function Works() {
           </TabList>
           <TabPanels>
             <TabPanel>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ type: "spring", duration: 0.8 }}
-              >
-                <ProjectItem />
-              </motion.div>
+              {works.map((work, id) => {
+                return (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ type: "spring", duration: 0.8 }}
+                  >
+                    <ProjectItem
+                      title={work.title}
+                      info={work.info}
+                      key={work.id}
+                      src={work.github}
+                      image={work.image}
+                    >
+                      <BlogTools tools={[
+                        { "icon": <BlogIcon><FaReact /></BlogIcon> },
+                        { "icon": <BlogIcon><DevIcon.DiHtml5 /></BlogIcon> },
+                        { "icon": <BlogIcon ><DevIcon.DiCss3 /></BlogIcon> },
+                      ]}
+                      />
+                    </ProjectItem>
+                  </motion.div>
+                )
+              })}
             </TabPanel>
 
 

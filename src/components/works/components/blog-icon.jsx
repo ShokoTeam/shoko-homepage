@@ -7,8 +7,7 @@ const BlogIcon = (props) => {
   return (
     <IconContext.Provider
       value={{
-        color: "black",
-        style: { height: 22, width: 22, color: `${props.color}` }
+        style: { height: 22, width: 22, color: "black" }
       }}>
       {props.children}
     </IconContext.Provider >

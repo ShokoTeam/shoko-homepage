@@ -8,21 +8,15 @@ import {
   Container,
 } from '@chakra-ui/react';
 
-import { FaReact } from 'react-icons/fa';
-import { AiFillHtml5 } from "react-icons/ai"
-import { IconContext } from 'react-icons';
-
 import PashaImage from "../../images/StaffCats/shoshi.png"
 
 import ProjectImage from './components/project-image';
 import BlogAuthor from './components/blog-author';
-import BlogTools from './components/blog-tools';
-import BlogIcon from './components/blog-icon';
 
 
 
 
-const ProjectItem = () => {
+const ProjectItem = (props) => {
   return (
     <Container maxW={'7xl'} p="12">
       <Box
@@ -45,7 +39,7 @@ const ProjectItem = () => {
             marginTop="5%"
             overflow="hidden"
           >
-            <ProjectImage href="#" src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80" />
+            <ProjectImage href={props.src} src={props.image} />
           </Box>
           <Box zIndex="1" width="100%" position="absolute" height="100%">
             <Box
@@ -68,13 +62,7 @@ const ProjectItem = () => {
           marginLeft={{ base: '0', sm: '5' }}
           marginTop={{ base: '2', sm: '3' }}
         >
-          <BlogTools tools={[
-            { "scheme": 'blue', "icon": <BlogIcon color="black"><FaReact/></BlogIcon>  },
-            { "scheme": 'orange', "icon": <BlogIcon><AiFillHtml5 /></BlogIcon> },
-            { "scheme": 'skyblue', "icon": <BlogIcon ><FaReact/></BlogIcon>  },
-            { "scheme": 'orange', "icon": <BlogIcon><AiFillHtml5 /></BlogIcon> },
-          ]}
-          />
+          {props.children}
           <Heading mt={4} textAlign={{ base: "center", md: "start" }}>
             <Link
               fontWeight="bold"
@@ -83,7 +71,7 @@ const ProjectItem = () => {
               textDecoration="none"
               _hover={{ textDecoration: 'none' }}
             >
-              Blog article title
+              {props.title}
             </Link>
           </Heading>
           <Text
@@ -92,10 +80,7 @@ const ProjectItem = () => {
             color='black'
             fontSize={{ base: "15px", md: "lg" }}
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            {props.info}
           </Text>
           <BlogAuthor name="Pasha" role="Tech Lead" image={PashaImage} />
         </Box>
