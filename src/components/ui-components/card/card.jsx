@@ -38,68 +38,78 @@ const Card = (props) => {
         </div>
 
         <ul className="social-icons">
-          <li className="link">
-            <Link href={props.github}>
-              <IconContext.Provider
-                value={{
-                  className: "icons",
-                  size: 35,
-                  alignItems: "center",
-                }}
-              >
-                <div className="github">
-                  <FaGithubSquare />
-                </div>
-              </IconContext.Provider>
-            </Link>
-          </li>
 
-          <li className="link">
-            <Link href={props.telegram}>
-              <IconContext.Provider
-                value={{
-                  className: "icons",
-                  size: 35,
-                  alignItems: "center",
-                }}
-              >
-                <div className="telegram">
-                  <FaTelegram />
-                </div>
-              </IconContext.Provider>
-            </Link>
-          </li>
-          <li className="link">
-            <Link href={props.youtube}>
-              <IconContext.Provider
-                value={{
-                  className: "icons",
-                  size: 35,
-                  alignItems: "center",
-                }}
-              >
-                <div className="youtube">
-                  <FaYoutube />
-                </div>
-              </IconContext.Provider>
-            </Link>
-          </li>
+          {props.github ? (
+            <li className="link">
+              <Link href={props.github}>
+                <IconContext.Provider
+                  value={{
+                    className: "icons",
+                    size: 35,
+                    alignItems: "center",
+                  }}
+                >
+                  <div className="github">
+                    <FaGithubSquare />
+                  </div>
+                </IconContext.Provider>
+              </Link>
+            </li>
+          ) : null}
 
-          <li className="link">
-            <Link href={props.behance}>
-              <IconContext.Provider
-                value={{
-                  className: "icons",
-                  size: 35,
-                  alignItems: "center",
-                }}
-              >
-                <div className="behance">
-                  <FaBehanceSquare />
-                </div>
-              </IconContext.Provider>
-            </Link>
-          </li>
+          {props.telegram ? (
+            <li className="link">
+              <Link href={props.telegram}>
+                <IconContext.Provider
+                  value={{
+                    className: "icons",
+                    size: 35,
+                    alignItems: "center",
+                  }}
+                >
+                  <div className="telegram">
+                    <FaTelegram />
+                  </div>
+                </IconContext.Provider>
+              </Link>
+            </li>
+          ) : null}
+
+          {props.youtube ? (
+            <li className="link">
+              <Link href={props.youtube}>
+                <IconContext.Provider
+                  value={{
+                    className: "icons",
+                    size: 35,
+                    alignItems: "center",
+                  }}
+                >
+                  <div className="youtube">
+                    <FaYoutube />
+                  </div>
+                </IconContext.Provider>
+              </Link>
+            </li>
+          ) : null}
+
+          {props.behance ? (
+            <li className="link">
+              <Link href={props.behance}>
+                <IconContext.Provider
+                  value={{
+                    className: "icons",
+                    size: 35,
+                    alignItems: "center",
+                  }}
+                >
+                  <div className="behance">
+                    <FaBehanceSquare />
+                  </div>
+                </IconContext.Provider>
+              </Link>
+            </li>
+          ) : null}
         </ul>
         <div className="details">
           <Text fontWeight="bold" pt={4}>{props.name}</Text>

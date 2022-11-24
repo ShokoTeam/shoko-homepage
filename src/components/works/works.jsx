@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import React from "react";
 import AnimHeading from "../ui-components/anim-heading/AnimHeading";
 import ProjectItem from "../works/ProjectItem"
+import ComingSoon from "./components/coming-soon";
 import CustomTab from "./tabs-motion";
 import "./works.css"
 
@@ -33,9 +34,15 @@ export default function Works() {
           justifyContent="center"
           alignItems="center"
           isLazy
+          size="sm"
           mt="4"
         >
-          <TabList>
+          <TabList
+            flexWrap="wrap"
+            gap={{ base: "3", sm: "0" }}
+            alignItems="center"
+            justifyContent="center"
+          >
             <CustomTab>
               Web
             </CustomTab>
@@ -43,6 +50,12 @@ export default function Works() {
               Design
             </CustomTab>
             <CustomTab>
+              Mobile
+            </CustomTab>
+            <CustomTab >
+              Desktop
+            </CustomTab>
+            <CustomTab >
               3D
             </CustomTab>
           </TabList>
@@ -75,7 +88,25 @@ export default function Works() {
                 animate={{ opacity: 1 }}
                 transition={{ type: "spring", duration: 0.8 }}
               >
-                <ProjectItem />
+                <ComingSoon />
+              </motion.div>
+            </TabPanel>
+            <TabPanel>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ type: "spring", duration: 0.8 }}
+              >
+                <ComingSoon />
+              </motion.div>
+            </TabPanel>
+            <TabPanel>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ type: "spring", duration: 0.8 }}
+              >
+                <ComingSoon />
               </motion.div>
             </TabPanel>
           </TabPanels>

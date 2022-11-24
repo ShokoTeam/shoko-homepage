@@ -1,4 +1,4 @@
-import { HStack, Tag } from '@chakra-ui/react';
+import { Badge, HStack } from '@chakra-ui/react';
 import React from 'react'
 
 const BlogTags = (props) => {
@@ -8,11 +8,11 @@ const BlogTags = (props) => {
       justifyContent='start'
       marginTop={props.marginTop}
     >
-      {props.tags.map((tag) => {
+      {props.tags.map((value, key) => {
         return (
-          <Tag size={'md'} my={1} variant="solid" colorScheme="blue" key={tag}>
-            {tag}
-          </Tag>
+          <Badge size={'md'} my={1} variant="solid" colorScheme={value.scheme} key={key}>
+            {value.type}
+          </Badge>
         );
       })}
     </HStack>

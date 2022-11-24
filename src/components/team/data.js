@@ -16,14 +16,15 @@ export const teamInfo = [
     job: 'Illustrator',
     github: "https://github.com/ShoshiDeveloper",
     telegram: "https://github.com/terrnit",
+    behance: ""
   },
   {
     id: 3,
     image_url: '/assets/cats/ruslan.jpg',
     name: 'Gabdraupov Ruslan',
     job: 'Writer',
-    github: "https://github.com/ShoshiDeveloper",
-    telegram: "https://github.com/terrnit",
+    github: "",
+    telegram: "",
   },
 
   {
@@ -33,6 +34,8 @@ export const teamInfo = [
     job: 'UI UX Designer',
     github: "https://github.com/terrnit",
     telegram: "https://github.com/terrnit",
+    behance: "",
+    youtube: ""
   },
 ]
 

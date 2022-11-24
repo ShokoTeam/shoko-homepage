@@ -68,14 +68,11 @@ const ProjectItem = () => {
           marginTop={{ base: '2', sm: '3' }}
         >
           <BlogTags tags={[
-            'Design',
-            'Development',
-            'Website'
+            { "scheme": 'green', "type": "Website" },
+            { "scheme": 'purple', "type": "Design" },
           ]}
           />
           <BlogTools tools={[
-            { "scheme": 'blue', "icon": <FaReact color='black' /> },
-            { "scheme": 'orange', "icon": <AiFillHtml5 /> },
             { "scheme": 'blue', "icon": <FaReact color='black' /> },
             { "scheme": 'orange', "icon": <AiFillHtml5 /> },
           ]}
