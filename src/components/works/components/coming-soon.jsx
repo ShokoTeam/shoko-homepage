@@ -1,4 +1,4 @@
-import { Box, Heading, Image, Text } from '@chakra-ui/react';
+import { Box , Image, Text } from '@chakra-ui/react';
 import { InfoIcon } from '@chakra-ui/icons';
 import JabCat from "../../../images/coming-soon.png"
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { HStack, Image, Text, Flex  } from '@chakra-ui/react';
+import { HStack, Image, Text, Flex } from '@chakra-ui/react';
 
 const BlogAuthor = (props) => {
   return (
@@ -12,14 +12,14 @@ const BlogAuthor = (props) => {
     >
       <Flex
         backgroundColor="blue.300"
-        boxSize="70px"
+        boxSize="60px"
         borderRadius="full"
         alignItems="center"
         justifyContent='center'
       >
         <Image
           borderRadius="full"
-          boxSize="60px"
+          boxSize="55px"
           src={props.image}
           alt={`Avatar of ${props.name}`}
         />

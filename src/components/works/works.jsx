@@ -1,4 +1,4 @@
-import { Box, Flex, TabList, Tabs, VStack, TabPanel, TabPanels } from "@chakra-ui/react";
+import { Box, Flex, TabList, Tabs, VStack, TabPanel, TabPanels, Tooltip } from "@chakra-ui/react";
 import { motion } from "framer-motion"
 import React from "react";
 import AnimHeading from "../ui-components/anim-heading/AnimHeading";
@@ -44,7 +44,7 @@ export default function Works() {
             justifyContent="center"
           >
             <CustomTab>
-              Web
+              Website
             </CustomTab>
             <CustomTab>
               Design
@@ -52,15 +52,18 @@ export default function Works() {
             <CustomTab>
               Mobile
             </CustomTab>
-            <CustomTab >
-              Desktop
+            <CustomTab isDisabled>
+              <Tooltip hasArrow label='Coming soon' bg='blue.600' color="white">
+                Desktop
+              </Tooltip>
             </CustomTab>
-            <CustomTab >
-              3D
+            <CustomTab isDisabled>
+              <Tooltip hasArrow label='Coming soon' bg='blue.600' color="white">
+                3D
+              </Tooltip>
             </CustomTab>
           </TabList>
           <TabPanels>
-
             <TabPanel>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -82,24 +85,6 @@ export default function Works() {
               </motion.div>
             </TabPanel>
 
-            <TabPanel>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ type: "spring", duration: 0.8 }}
-              >
-                <ComingSoon />
-              </motion.div>
-            </TabPanel>
-            <TabPanel>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ type: "spring", duration: 0.8 }}
-              >
-                <ComingSoon />
-              </motion.div>
-            </TabPanel>
             <TabPanel>
               <motion.div
                 initial={{ opacity: 0 }}
