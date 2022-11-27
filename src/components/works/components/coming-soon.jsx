@@ -1,10 +1,10 @@
-import { Box , Image, Text } from '@chakra-ui/react';
+import { Image, Text, VStack } from '@chakra-ui/react';
 import { InfoIcon } from '@chakra-ui/icons';
 import JabCat from "../../../images/coming-soon.png"
 
 export default function ComingSoon() {
   return (
-    <Box textAlign="center" py={10} px={6}>
+    <VStack justifyContent="center" textAlign="center" py={10} px={6}>
       <InfoIcon boxSize={'50px'} color={'blue.600'} />
       <Text
         as="h2"
@@ -22,11 +22,11 @@ export default function ComingSoon() {
         - Coming Soon -
       </Text>
       <Image
-        h={210}
+        h={180}
         w={310}
         src={JabCat}
         alt="working cat"
       />
-    </Box>
+    </VStack>
   );
 }

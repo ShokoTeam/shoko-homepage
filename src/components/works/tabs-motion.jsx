@@ -23,7 +23,7 @@ const CustomTab = React.forwardRef((props, ref) => {
         <motion.div
           style={{
             position: "absolute",
-            bottom: "-8px",
+            bottom: "-1px",
             left: "0px",
             right: 0,
             height: "4px",

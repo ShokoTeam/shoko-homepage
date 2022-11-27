@@ -12,19 +12,19 @@ import PashaImage from "../../images/StaffCats/shoshi.png"
 
 import ProjectImage from './components/project-image';
 import BlogAuthor from './components/blog-author';
+import ReadMore from './components/read-more';
 
 
 
 
 const ProjectItem = (props) => {
   return (
-    <Container maxW={'7xl'} p="12">
+    <Container maxW={'7xl'} p={4}>
       <Box
         marginTop={{ base: '1', sm: '3' }}
         display="flex"
         flexDirection={{ base: 'column', sm: 'row' }}
         justifyContent="space-between"
-
         alignItems="center"
       >
         <Box
@@ -35,8 +35,6 @@ const ProjectItem = (props) => {
           <Box
             width={{ base: '100%', sm: '85%' }}
             zIndex="2"
-            marginLeft={{ base: '0', sm: '5%' }}
-            marginTop="5%"
             overflow="hidden"
           >
             <ProjectImage href={props.src} src={props.image} />
@@ -80,7 +78,7 @@ const ProjectItem = (props) => {
             color='black'
             fontSize={{ base: "15px", md: "lg" }}
           >
-            {props.info}
+            <ReadMore text={props.info} />
           </Text>
           <BlogAuthor name="Pasha" role="Tech Lead" image={PashaImage} />
         </Box>

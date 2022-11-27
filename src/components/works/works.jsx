@@ -5,13 +5,9 @@ import AnimHeading from "../ui-components/anim-heading/AnimHeading";
 import ProjectItem from "../works/ProjectItem"
 import ComingSoon from "./components/coming-soon";
 import CustomTab from "./tabs-motion";
-import { works } from "./data.js"
+import { website, mobile } from "./data.js"
 import "./works.css"
 
-import { FaReact } from 'react-icons/fa';
-import * as DevIcon from "react-icons/di"
-import BlogTools from './components/blog-tools';
-import BlogIcon from './components/blog-icon';
 
 export default function Works() {
   return (
@@ -44,7 +40,7 @@ export default function Works() {
         >
           <TabList
             flexWrap="wrap"
-            gap={{ base: "3", sm: "0" }}
+            gap={{ base: "0", sm: "0" }}
             alignItems="center"
             justifyContent="center"
           >
@@ -70,7 +66,7 @@ export default function Works() {
           </TabList>
           <TabPanels>
             <TabPanel>
-              {works.map((work, id) => {
+              {website.map(site => {
                 return (
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -78,35 +74,49 @@ export default function Works() {
                     transition={{ type: "spring", duration: 0.8 }}
                   >
                     <ProjectItem
-                      title={work.title}
-                      info={work.info}
-                      key={work.id}
-                      src={work.github}
-                      image={work.image}
+                      title={site.title}
+                      info={site.info}
+                      key={site.id}
+                      src={site.github}
+                      image={site.image}
                     >
-                      <BlogTools tools={[
-                        { "icon": <BlogIcon><FaReact /></BlogIcon> },
-                        { "icon": <BlogIcon><DevIcon.DiHtml5 /></BlogIcon> },
-                        { "icon": <BlogIcon ><DevIcon.DiCss3 /></BlogIcon> },
-                      ]}
-                      />
+                      {/* TODO: Parse array of icons */}
+                      {/* <BlogTools tools={[ */}
+                      {/*   { "icon": <BlogIcon><FaReact /></BlogIcon> }, */}
+                      {/*   { "icon": <BlogIcon><DevIcon.DiHtml5 /></BlogIcon> }, */}
+                      {/*   { "icon": <BlogIcon ><DevIcon.DiCss3 /></BlogIcon> }, */}
+                      {/* ]} */}
+                      {/* /> */}
                     </ProjectItem>
                   </motion.div>
                 )
               })}
             </TabPanel>
 
-
             <TabPanel>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ type: "spring", duration: 0.8 }}
-              >
-                <ProjectItem />
-              </motion.div>
+              <ComingSoon />
             </TabPanel>
 
+            <TabPanel>
+              {mobile.map(item => {
+                return (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ type: "spring", duration: 0.8 }}
+                  >
+                    <ProjectItem
+                      title={item.title}
+                      info={item.info}
+                      key={item.id}
+                      src={item.github}
+                      image={item.image}
+                    >
+                    </ProjectItem>
+                  </motion.div>
+                )
+              })}
+            </TabPanel>
             <TabPanel>
               <motion.div
                 initial={{ opacity: 0 }}

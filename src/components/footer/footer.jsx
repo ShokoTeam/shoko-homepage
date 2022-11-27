@@ -28,13 +28,34 @@ export default function Footer() {
         align={'center'}
         direction={{ base: 'column', md: 'row-reverse' }}
       >
-        <Stack my={4} fontSize={{ base: "14px", md: "16px" }} direction={{ base: 'row', sm: 'row' }} spacing={7} align="center" justifyContent="center">
-          <Link to={'/'}>Home</Link>
-          <a href='https://github.com/ShokoTeam'>Github</a>
-          <a href={'/'}>Donate</a>
-          <Link to={'/privacy'}>Privacy</Link>
+        <Stack
+          my={4}
+          fontSize={{ base: "14px", md: "16px" }}
+          direction={{ base: 'row', sm: 'row' }}
+          spacing={4}
+          align="center"
+          justifyContent="center"
+        >
+          <Link to={'/'}>
+            Home
+          </Link>
+          <a href='https://github.com/ShokoTeam'>
+            Github
+          </a>
+          <a
+            target="_blank"
+            href={'https://boosty.to/shokoteam'}>
+            Donate
+          </a>
+          <Link to={'/privacy'}>
+            Privacy
+          </Link>
         </Stack>
-        <img src={Logo} alt="shoko" className="footer__logo" />
+        <img
+          src={Logo}
+          alt="shoko"
+          className="footer__logo"
+        />
       </Container>
     </Box>
   );

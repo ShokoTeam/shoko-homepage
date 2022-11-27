@@ -10,23 +10,23 @@ const BlogAuthor = (props) => {
       display="flex"
       alignItems="center"
     >
-      <Flex
-        backgroundColor="blue.300"
-        boxSize="60px"
+      <Image
         borderRadius="full"
-        alignItems="center"
-        justifyContent='center'
-      >
-        <Image
-          borderRadius="full"
-          boxSize="55px"
-          src={props.image}
-          alt={`Avatar of ${props.name}`}
-        />
-      </Flex>
-      <Flex flexDir="column" fontSize="lg" >
-        <Text fontWeight="bold">{props.name}</Text>
-        <Text fontWeight="medium">{props.role}</Text>
+        width="45px"
+        src={props.image}
+        alt={`Avatar of ${props.name}`}
+      />
+      <Flex fontSize={{ base: "14px", sm: "16px" }} flexDir="column"  >
+        <Text
+          fontWeight="bold"
+        >
+          {props.name}
+        </Text>
+        <Text
+          fontWeight="medium"
+        >
+          {props.role}
+        </Text>
       </Flex>
     </HStack>
   );

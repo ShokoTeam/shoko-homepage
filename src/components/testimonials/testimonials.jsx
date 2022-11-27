@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import Feedback from "../ui-components/feedback/feedback.jsx";
+import { reviews } from "./data";
 
 // TODO: Delete hardcode text value in Feedback and create data source
 
@@ -23,7 +24,7 @@ const Testimonials = () => {
         breakpoints={{
           340: {
             slidesPerView: 1,
-            spaceBetween: 80,
+            spaceBetween: 10,
           },
           480: {
             slidesPerView: 1,
@@ -40,7 +41,7 @@ const Testimonials = () => {
 
           1600: {
             slidesPerView: 3,
-            spaceBetween: 30,
+            spaceBetween: 10,
           },
         }}
         autoplay
@@ -50,47 +51,18 @@ const Testimonials = () => {
         modules={[FreeMode, Pagination]}
         className="swiper"
       >
-        <SwiperSlide>
-          <Feedback
-            text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti eveniet assumenda quidem laboriosam repudiandae, autem tempore consectetur enim ratione eligendi?"
-            name="userName"
-          />
-        </SwiperSlide>
+        {reviews.map(item => {
+          return (
+            <SwiperSlide>
+              <Feedback
+                id={item.id}
+                text={item.text}
+                name={item.name}
+              />
+            </SwiperSlide>
+          )
+        })}
 
-        <SwiperSlide>
-          <Feedback
-            text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti eveniet assumenda quidem laboriosam repudiandae, autem tempore consectetur enim ratione eligendi?"
-            name="userName"
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Feedback
-            text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti eveniet assumenda quidem laboriosam repudiandae, autem tempore consectetur enim ratione eligendi?"
-            name="userName"
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Feedback
-            text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti eveniet assumenda quidem laboriosam repudiandae, autem tempore consectetur enim ratione eligendi?"
-            name="userName"
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Feedback
-            text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti eveniet assumenda quidem laboriosam repudiandae, autem tempore consectetur enim ratione eligendi?"
-            name="userName"
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Feedback
-            text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti eveniet assumenda quidem laboriosam repudiandae, autem tempore consectetur enim ratione eligendi?"
-            name="userName"
-          />
-        </SwiperSlide>
       </Swiper>
     </div>
   );

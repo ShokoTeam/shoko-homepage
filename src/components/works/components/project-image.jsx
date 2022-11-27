@@ -9,7 +9,7 @@ const ProjectImage = (props) => {
         maxH={"560px"}
         w={"100%"}
         m={0}
-        borderRadius="lg"
+        borderRadius="2xl"
         objectFit="contain"
         alt="some good alt text"
         src={
