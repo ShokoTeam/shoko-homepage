@@ -12,14 +12,18 @@ const titleAnimation = {
   })
 }
 
-const AnimHeading = ({ children, custom, color }) => {
+const AnimHeading = ({ children, custom, color, ...props }) => {
   return (
     <Flex
       as={motion.div}
+      initial="hidden"
+      whileInView="visible"
       alignItems="center"
       justifyContent='center'
+      mb={4}
+      {...props}
     >
-      <Heading alignItems="center" as={motion.h2} variants={titleAnimation} custom={custom} color={color} fontSize="4xl">
+      <Heading alignItems="center" as={motion.h3} variants={titleAnimation} custom={custom} color={color} fontSize="4xl">
         {children}
       </Heading>
     </Flex>

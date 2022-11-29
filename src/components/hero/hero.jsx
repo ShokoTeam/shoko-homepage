@@ -4,8 +4,9 @@ import { motion } from "framer-motion"
 
 import "./hero.css";
 
-import Logo from "../../images/logo_white.png";
+
 import Arrow from "../../images/icons/ArrowDown.svg";
+import Logo from "../atoms/logo/logo";
 
 const textAnimation = {
   hidden: {
@@ -28,7 +29,7 @@ const Hero = () => {
       <div class="parallax">
         <div class="parallax-content">
           <div className="hero__container">
-            <img src={Logo} alt="shoko" className="hero__logo" />
+            <Logo className="hero__logo" />
             <div className="hero__content">
               <motion.h1 custom={1} variants={textAnimation} >
                 Shoko

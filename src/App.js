@@ -8,16 +8,19 @@ import Works from "./components/works/works";
 import "./styles/global.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./utilities/theme"
+import Section from "./components/atoms/section/section.jsx";
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Hero />
-      <Team />
-      <Services />
-      <Works />
-      <Testimonials />
-      <Contact />
+      <Section>
+        <Hero />
+        <Team />
+        <Services />
+        <Works />
+        <Testimonials />
+        <Contact />
+      </Section>
     </ChakraProvider>
   );
 }

@@ -5,11 +5,11 @@ import {
   Stack,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { Link } from "react-router-dom"
 
 import "./footer.css";
+import Logo from "../atoms/logo/logo";
+import NavLink from "../atoms/navlink/navlink";
 
-import Logo from "../../images/logo_white.png";
 
 
 export default function Footer() {
@@ -36,26 +36,20 @@ export default function Footer() {
           align="center"
           justifyContent="center"
         >
-          <Link to={'/'}>
+          <NavLink href='/'>
             Home
-          </Link>
-          <a href='https://github.com/ShokoTeam'>
+          </NavLink>
+          <NavLink href='https://github.com/ShokoTeam'>
             Github
-          </a>
-          <a
-            target="_blank"
-            href={'https://boosty.to/shokoteam'}>
+          </NavLink>
+          <NavLink href='https://boosty.to/shokoteam'>
             Donate
-          </a>
-          <Link to={'/privacy'}>
+          </NavLink>
+          <NavLink href='/privacy'>
             Privacy
-          </Link>
+          </NavLink>
         </Stack>
-        <img
-          src={Logo}
-          alt="shoko"
-          className="footer__logo"
-        />
+        <Logo className="footer__logo" />
       </Container>
     </Box>
   );

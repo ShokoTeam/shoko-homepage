@@ -1,4 +1,4 @@
-import { Text } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
 import React from 'react'
 import { motion } from "framer-motion"
 
@@ -14,11 +14,25 @@ export const textAnimation = {
   })
 }
 
-const AnimText = ({ children }) => {
+const AnimText = ({ custom, children, ...props }) => {
   return (
-    <Text as={motion.h3} variants={textAnimation} custom={1} fontSize={24} fontWeight="bold" mb={5} maxW="1240px">
-      {children}
-    </Text>
+    <Box
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2 }}
+      as={motion.div}
+    >
+      <Text
+        as={motion.h3}
+        variants={textAnimation}
+        fontSize={24}
+        mb={5}
+        custom={custom}
+        {...props}
+      >
+        {children}
+      </Text>
+    </Box>
   )
 }
 

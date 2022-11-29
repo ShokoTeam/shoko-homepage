@@ -1,19 +1,15 @@
 import React from "react"
-import { Link, useColorModeValue } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react"
 
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={'md'}
-    _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue('gray.700', 'gray.700'),
-    }}
-    href={'#'}>
-    {children}
-  </Link>
-);
+const NavLink = ({ href, children }) => (
+  <Box>
+    <a
+      rel="noreferrer"
+      href={href}>
+      {children}
+    </a>
+  </Box>
+)
 
 
 export default NavLink

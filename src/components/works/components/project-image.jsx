@@ -6,10 +6,8 @@ const ProjectImage = (props) => {
 
     <Link href={props.href} alt="project" >
       <Image
-        maxH={"560px"}
-        w={"100%"}
         m={0}
-        borderRadius="2xl"
+        borderRadius="xl"
         objectFit="contain"
         alt="some good alt text"
         src={

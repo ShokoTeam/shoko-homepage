@@ -8,6 +8,7 @@ const CustomTab = React.forwardRef((props, ref) => {
 
   return (
     <Button
+      variant="unstyled"
       style={{
         position: "relative",
       }}
