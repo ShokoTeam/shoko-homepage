@@ -33,8 +33,7 @@ const Card = (props) => {
       className="card__container"
     >
       <div className="card">
-        <div className="card-image">
-          <img src={props.image} alt="cat" />
+        <div className="card-image"> <img src={props.image} alt="cat" />
         </div>
 
         <ul className="social-icons">
@@ -112,7 +111,7 @@ const Card = (props) => {
           ) : null}
         </ul>
         <div className="details">
-          <Text fontWeight="bold" pt={4}>{props.name}</Text>
+          <Text fontWeight="bold" >{props.name}</Text>
           <span className="role-title">{props.job}</span>
         </div>
       </div>

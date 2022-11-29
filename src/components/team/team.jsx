@@ -75,8 +75,8 @@ function Team() {
         textAlign="center"
         justify="center"
         wrap="unset"
-        spacing={{ base: 3, lg: 3 }}
-        py={10}
+        spacing={{ sm: "5", base: "9", lg: 3 }}
+        py={12}
       >
         {teamInfo.map(props => (
           <Card
