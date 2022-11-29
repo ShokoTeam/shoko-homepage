@@ -4,7 +4,7 @@ import "./contact.css";
 
 import Logo from "../../images/logo_white.png";
 
-import FormCustom from "../ui-components/form/form.jsx";
+import FormCustom from "../atoms/form/form.jsx";
 
 import Footer from "../footer/footer.jsx";
 

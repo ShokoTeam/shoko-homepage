@@ -6,10 +6,9 @@ import "./testimonials.css";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import Feedback from "../ui-components/feedback/feedback.jsx";
+import Feedback from "../atoms/feedback/feedback.jsx";
 import { reviews } from "./data";
 
-// TODO: Delete hardcode text value in Feedback and create data source
 
 const Testimonials = () => {
   const pagination = {

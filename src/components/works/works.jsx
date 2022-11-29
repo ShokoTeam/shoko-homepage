@@ -1,7 +1,7 @@
 import { Box, Flex, TabList, Tabs, VStack, TabPanel, TabPanels, Tooltip } from "@chakra-ui/react";
 import { motion } from "framer-motion"
 import React from "react";
-import AnimHeading from "../ui-components/anim-heading/AnimHeading";
+import AnimHeading from "../atoms/anim-heading/AnimHeading";
 import ProjectItem from "../works/ProjectItem"
 import ComingSoon from "./components/coming-soon";
 import CustomTab from "./tabs-motion";

@@ -7,7 +7,7 @@ import Works from "./components/works/works";
 
 import "./styles/global.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import theme from "./theme"
+import theme from "./utilities/theme"
 
 function App() {
   return (

@@ -12,7 +12,7 @@ import { IconContext } from 'react-icons';
 import { FaDesktop } from "react-icons/fa"
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2"
 import { MdDraw } from "react-icons/md"
-import AnimHeading from "../ui-components/anim-heading/AnimHeading";
+import AnimHeading from "../atoms/anim-heading/AnimHeading";
 import ServicesWrapper from "./services-wrapper";
 
 

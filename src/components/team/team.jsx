@@ -10,9 +10,9 @@ import { motion } from "framer-motion"
 
 import "./team.css";
 
-import Card from "./../ui-components/card/card.jsx";
+import Card from "./../atoms/card/card.jsx";
 
-import AnimHeading from "../ui-components/anim-heading/AnimHeading";
+import AnimHeading from "../atoms/anim-heading/AnimHeading";
 import { teamInfo } from "./data";
 
 
@@ -40,7 +40,7 @@ function Team() {
       flexDir="column"
       justifyContent='center'
       alignItems="center"
-      h={{ sm: "80vh", base: "100%", md: "100%" }}
+      h={{ sm: "auto", base: "100%", md: "100%" }}
       initial="hidden"
       whileInView="visible"
       viewport={{ amount: 0.3 }}
@@ -74,7 +74,7 @@ function Team() {
         direction={{ base: 'column', md: 'row' }}
         textAlign="center"
         justify="center"
-        flexWrap={"wrap"}
+        wrap="unset"
         spacing={{ base: 3, lg: 3 }}
         py={10}
       >
