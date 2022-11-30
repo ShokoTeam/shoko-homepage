@@ -3,7 +3,6 @@
   "version": "0.1.1",
   "description": "Shokoteam's website",
   "author": "terrnit",
-  "license": "",
   "private": true,
   "dependencies": {
     "@ap.cx/react-fullpage": "^0.3.0",
