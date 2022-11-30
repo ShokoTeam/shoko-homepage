@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRef } from 'react';
 import {
   Box,
   Flex,
@@ -12,16 +13,23 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 import Logo from '../logo/logo';
 import NavLink from '../navlink/navlink';
+import GoToButton from '../go-to-top/GoToButton';
 
 export function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  const topRef = useRef(null)
+
   return (
     <>
       <Box
-        position="sticky"
+        ref={topRef}
+        zIndex="10"
+        position="fixed"
+        w="100%"
         bg={useColorModeValue('gray.100', 'gray.900')}
-        px={8}>
+        px={8}
+      >
         <Flex
           h={16}
           alignItems={'center'}
@@ -33,6 +41,7 @@ export function NavBar() {
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
           />
+
           <Flex gap={4} spacing={8} alignItems='center' justifyContent="space-around">
             <Box>
               <Logo width={35} heigth={35} />
@@ -53,6 +62,7 @@ export function NavBar() {
               </NavLink>
             </HStack>
           </Flex>
+          <GoToButton target={topRef} />
         </Flex>
 
         {isOpen ? (

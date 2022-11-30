@@ -20,7 +20,6 @@ export default function Works() {
         </VStack>
         <WorksTabs />
       </Box>
-
     </Layout>
   );
 }
