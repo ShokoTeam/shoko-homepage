@@ -31,7 +31,7 @@
 
 .social-icons {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.5s;
@@ -81,6 +81,11 @@
 }
 
 .behance:hover {
+  color:#1B2CC1;
+  transition: color 0.4s 0s ease-out;
+}
+
+.vk:hover {
   color:#1B2CC1;
   transition: color 0.4s 0s ease-out;
 }

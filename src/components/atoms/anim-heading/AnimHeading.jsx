@@ -23,7 +23,7 @@ const AnimHeading = ({ children, custom, color, ...props }) => {
       mb={4}
       {...props}
     >
-      <Heading alignItems="center" as={motion.h3} variants={titleAnimation} custom={custom} color={color} fontSize="2xl">
+      <Heading alignItems="center" as={motion.h3} variants={titleAnimation} custom={custom} color={color} fontSize={{ base: "xl", sm: "2xl" }}>
         {children}
       </Heading>
     </Flex>

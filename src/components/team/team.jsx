@@ -57,6 +57,8 @@ function Team() {
             job={props.job}
             github={props.github}
             telegram={props.telegram}
+            youtube={props.youtube}
+            vk={props.vk}
           />
         ))}
       </Stack>

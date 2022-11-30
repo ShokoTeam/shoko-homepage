@@ -10,6 +10,7 @@ import {
   FaYoutube,
   FaBehanceSquare,
 } from "react-icons/fa";
+import { SlSocialVkontakte } from "react-icons/sl"
 import { IconContext } from "react-icons";
 
 const cardAnimation = {
@@ -40,7 +41,7 @@ const Card = (props) => {
 
           {props.github ? (
             <li className="link">
-              <Link href={props.github}>
+              <Link target="_blank" href={props.github}>
                 <IconContext.Provider
                   value={{
                     className: "icons",
@@ -58,7 +59,8 @@ const Card = (props) => {
 
           {props.telegram ? (
             <li className="link">
-              <Link href={props.telegram}>
+              <Link target="_blank"
+                href={props.telegram}>
                 <IconContext.Provider
                   value={{
                     className: "icons",
@@ -76,7 +78,7 @@ const Card = (props) => {
 
           {props.youtube ? (
             <li className="link">
-              <Link href={props.youtube}>
+              <Link target="_blank" href={props.youtube}>
                 <IconContext.Provider
                   value={{
                     className: "icons",
@@ -94,7 +96,7 @@ const Card = (props) => {
 
           {props.behance ? (
             <li className="link">
-              <Link href={props.behance}>
+              <Link target="_blank" href={props.behance}>
                 <IconContext.Provider
                   value={{
                     className: "icons",
@@ -104,6 +106,24 @@ const Card = (props) => {
                 >
                   <div className="behance">
                     <FaBehanceSquare />
+                  </div>
+                </IconContext.Provider>
+              </Link>
+            </li>
+          ) : null}
+
+          {props.vk ? (
+            <li className="link">
+              <Link target="_blank" href={props.vk}>
+                <IconContext.Provider
+                  value={{
+                    className: "icons",
+                    size: 35,
+                    alignItems: "center",
+                  }}
+                >
+                  <div className="vk">
+                    <SlSocialVkontakte />
                   </div>
                 </IconContext.Provider>
               </Link>
